@@ -1,5 +1,7 @@
 Hello!
 
+data is at:  https://github.com/kuberca/k8s-vector/releases/download/0.0.1/kube-controller-manager.tar.gz
+
 split-file.py to split the build log and service log into multiple files based on the test case (namespace)
 
 rmtime.sh remove time info in the service log file to get only the log message for training
