@@ -9,7 +9,7 @@ rmtime.sh remove time info in the service log file to get only the log message f
 clean.py to remove all the special chars like :;\/
 
 # pipeline to  train the language model
-1. combine all success test case service logs
+1. combine all service logs
 2. run rmtime.sh
 3. run clean.py
 4. run fasttext -skipgram -input test.log -output model/k8s
