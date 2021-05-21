@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+# given build log file and service log file, split the two into each test run based on namespace
+# build log contains if the test run is success or not, we'll put the service log splits into ok/failed directories
+# for each splited service log, also create an additional file only contain the timestamp and the 
+# time it takes from last log to current one
+
 import json
 import logging
 import os
@@ -9,13 +14,12 @@ import time
 import argparse
 import re
 import gzip
+#from datetime import datetime
+import pandas as pd
 
 from os import listdir
 from os.path import isfile, isdir, join
 
-
-# given build log file and service log file, split the two into each test run based on namespace
-# build log contains if the test run is success or not, we'll put the service log splits into ok/failed directories
 parser = argparse.ArgumentParser(description='split logs for each test case.')
 parser.add_argument('build_log', metavar='build_log', type=str, help='build log file')
 parser.add_argument('service_log', metavar='service_log', type=str, help='service log file')
@@ -64,6 +68,8 @@ failure = re.compile(".*Failure \[\d+\.\d+ .*\].*")                             
 namespaces = []                                                                                                 # namespace is used to split the logs because each test case is using a new namespace
 results = {}
 failedCases = {}
+
+
 
 with open(build_log) as bf:
     store = ""                                  # to keep logs for current test case
@@ -147,40 +153,14 @@ prefix = "(" + "|".join(nsprefix) + ")"
 sufix = "((-\d{1,4}))"
 rep = re.compile(".*(" + prefix + sufix + ").*")
 
-# teststr = "I0331 18:34:44.120761      10 eventhandlers.go:279] \"Delete event for scheduled pod\" pod=\"csi-mock-volumes-1570-6273/csi-mockplugin-0\""
-# m = rep.match(teststr)
-# if m:
-#     print(m.group(1))
-
-
-# art_dir = join(log_dir,"artifacts")
-
-
-# dirs = [f for f in listdir(art_dir) if isdir(join(art_dir, f))]
-# for d in dirs:
-#     dir=join(art_dir, d)
-#     files = [f for f in listdir(dir) if isfile(join(dir, f))]
-
-# for root, dirs, files in os.walk(art_dir):
-    # for file in files:
-    
-# if not "log" in file:
-#     continue
-# 
-
-# if file.endswith(".log"):
-#     bf = open(join(root,file))
-# else:
-#     bf = gzip.open(join(root, file), "rt")
-#     try: 
-#         bf.readline()
-#     except gzip.BadGzipFile:
-#         print(file, "is not a gzip file")
-#         bf = open(join(root,file))
 
 for n in namespaces:
      results[n] = []
 
+# for log lines not matched with any namespace
+NoNS="no-ns"
+
+results[NoNS]=[]
 bf = open(service_log)
 for line in bf:
     m = rep.match(line)
@@ -189,17 +169,48 @@ for line in bf:
         # this ns may not be the exact one
         if ns in results:
             results[ns].append(line)
+    else:
+        results[NoNS].append(line)
 
+
+# write out the no-ns lines
+with open(service_log+".nons", "w") as f:
+    f.writelines(results[NoNS])
+
+# timeseq keep the time of each log, and the time it takes from last log to current log
+timeseq = []
 
 for n in namespaces:
     if results[n]:
+        timeseq = []
+        lastTime = None
+
         if n in failedCases:
             outdir = join(service_log+".err")
         else:
             outdir = join(service_log+".ok")
         if not os.path.isdir(outdir):
             os.mkdir(outdir)
+
         with open(join(outdir, n), "w") as f:
             f.writelines(results[n])
+
+        for line in results[n]:
+            timestr = line.split()[0]
+            # timestamp: 2021-05-17T22:36:39.165544386Z
+            date_time_obj = pd.to_datetime(timestr, format='%Y-%m-%dT%H:%M:%S.%fZ')
+            if date_time_obj: 
+                if len(timeseq) == 0:
+                    lastTime = date_time_obj
+                    timeseq.append((timestr, 0))
+                else:
+                    diff = (date_time_obj-lastTime).total_seconds()
+                    if diff < 0.0001:
+                        diff = 0
+                    lastTime = date_time_obj
+                    timeseq.append((timestr, diff))
+
+        with open(join(outdir, n + ".time"), 'w') as pf:
+            pf.write("\n".join(map(str, timeseq)))
 
 
