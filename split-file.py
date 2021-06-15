@@ -32,6 +32,9 @@ service_log = args.service_log
 logger = logging.getLogger(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, format='%(message)s')
 
+
+
+
 build_log_out_dir_ok = build_log + ".ok"
 build_log_out_dir_err = build_log + ".err"
 if not isdir(build_log_out_dir_ok):
@@ -139,6 +142,7 @@ with open(build_log) as bf:
                     failed = True
 
 
+print("failued cases", failedCases)
 # construct a regex contains all the namespaces, to filter out logs from service log
 # so if the log does not contain the namespace, the the log is actually not selected out, this could be an issue
 # the namespace is like node-port-7890, or node-port-1234-7890, because there are many namespaces
@@ -149,13 +153,35 @@ for n in namespaces:
     newarr = [st for st in sp if not st.isdecimal()]
     nsprefix["-".join(newarr)]=""
 
+# to match namespace only
+# the [^a-z] at the very begining is to avoid it match to some substring like
+# pod="provisioning-4020/pod-subpath-test-dynamicpv-629d"
+# without it, above will map to namespace of 'pv-629' 
 prefix = "(" + "|".join(nsprefix) + ")"
 sufix = "((-\d{1,4}))"
-rep = re.compile(".*(" + prefix + sufix + ").*")
+rep = re.compile(".*[^a-z](" + prefix + sufix + ").*")
 
 
-for n in namespaces:
-     results[n] = []
+# to match namespace/obj:  .*((volumemode)((-\d{1,4})*)(\/?([-a-z0-9])*)?).*
+# example: volumemode-5139-8151/csi-hostpathplugin
+
+matchFullName = True
+
+if matchFullName:
+    sufixFull = "(-\d{1,4})+"
+    objName = "(\/([-a-z0-9])+)"
+    repFull = re.compile(".*[^a-z](" + prefix + sufixFull + objName + ").*")
+
+# above regex will match some urls like: GET:https://kind-control-plane:6443/api/v1/namespaces/webhook-9749/pods/to-be-attached-pod
+# so we filter out these ones 
+apiRes = ["secrets","configmaps","pods","serviceaccounts","persistentvolumes","events","csi"]
+apiMap={}
+for r in apiRes:
+    apiMap["/"+r]=True
+
+# results: map[namespace] => (map[objName]=>[lines])
+# if not matchFullName, then objName == namespace
+# keep the two level dict to make it easier for later code of writing output
 
 # for log lines not matched with any namespace
 NoNS="no-ns"
@@ -166,11 +192,37 @@ for line in bf:
     m = rep.match(line)
     if m:
         ns = m.group(1)
-        # this ns may not be the exact one
-        if ns in results:
-            results[ns].append(line)
+
+        if ns not in results:
+            results[ns] = {}
+
+        # default use namespace as obj for not matchFullName
+        obj = ns
+
+        # if matchFullname, then lets replace / with -- in the name
+        if matchFullName:
+            #m1 = repFull.match(line)
+            m1 = re.match(repFull, line)
+            if m1:
+                obj = m1.group(1)
+                resource = m1.group(4)
+
+                # matching the lines like GET:https://kind-control-plane:6443/api/v1/namespaces/webhook-9749/pods/to-be-attached-pod
+                if resource in apiMap:
+                    obj = ns
+
+                obj = obj.replace("/", "--")
+                # print("ns is" + ns, "obj is " + obj)
+
+
+        if obj in results[ns]:
+            results[ns][obj].append(line)
+        else:
+            results[ns][obj] = [line]       
+
     else:
         results[NoNS].append(line)
+
 
 
 # write out the no-ns lines
@@ -180,37 +232,63 @@ with open(service_log+".nons", "w") as f:
 # timeseq keep the time of each log, and the time it takes from last log to current log
 timeseq = []
 
-for n in namespaces:
-    if results[n]:
-        timeseq = []
-        lastTime = None
+# just use 19:08:25.124718 as format
+timestr = re.compile(".*(\d\d:\d\d:\d\d\.\d+).*") 
 
-        if n in failedCases:
-            outdir = join(service_log+".err")
-        else:
-            outdir = join(service_log+".ok")
-        if not os.path.isdir(outdir):
-            os.mkdir(outdir)
 
-        with open(join(outdir, n), "w") as f:
-            f.writelines(results[n])
+for ns in results:
+    if ns == NoNS:
+        continue
 
-        for line in results[n]:
-            timestr = line.split()[0]
-            # timestamp: 2021-05-17T22:36:39.165544386Z
-            date_time_obj = pd.to_datetime(timestr, format='%Y-%m-%dT%H:%M:%S.%fZ')
+    timeseq = []
+    lastTime = None
+
+    if ns in failedCases:
+        outdir = join(service_log+".err")
+    else:
+        outdir = join(service_log+".ok")
+    if not os.path.isdir(outdir):
+        os.mkdir(outdir)
+
+    # print("\n"+ns+"\n")
+    # print(results[ns])
+
+    for obj in results[ns]:
+
+        with open(join(outdir, obj), "w") as f:
+            f.writelines(results[ns][obj])
+
+        for line in results[ns][obj]:
+            # kcm log timestamp format:         2021-04-02T19:08:25.125001456Z stderr F I0402 19:08:25.124718       1 namespace_controller.go:185]
+            # kubelet log timestamp format:     Mar 26 05:50:45 kind-worker kubelet[245]: I0326 05:50:45.758222     245 factory.go:220]
+            # containerd log format:            Mar 26 05:48:31 kind-worker containerd[174]: time="2021-03-26T05:48:31.039455687Z" level=info
+            # date_time_obj = pd.to_datetime(timestr, format='%Y-%m-%dT%H:%M:%S.%fZ')
+
+            m = timestr.match(line)
+            if m:
+                try:
+                    date_time_obj = pd.to_datetime(m.group(1), format='%H:%M:%S.%f')
+                except:
+                    print("conver to date time exception")
+                    print("string", m.group(1))
+                    print("line", line)
+                    continue
+            else:
+                continue
             if date_time_obj: 
                 if len(timeseq) == 0:
                     lastTime = date_time_obj
-                    timeseq.append((timestr, 0))
+                    timeseq.append((m.group(1), 0))
                 else:
                     diff = (date_time_obj-lastTime).total_seconds()
                     if diff < 0.0001:
                         diff = 0
                     lastTime = date_time_obj
-                    timeseq.append((timestr, diff))
+                    timeseq.append((m.group(1), diff))
 
-        with open(join(outdir, n + ".time"), 'w') as pf:
-            pf.write("\n".join(map(str, timeseq)))
+        with open(join(outdir, obj + ".time"), 'w') as pf:
+            pf.write("\n".join(map(str, timeseq)))  
+
+
 
 

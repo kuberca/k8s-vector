@@ -1,0 +1,1404 @@
+/Users/junzhou/code/rca/data/k8s/pull-kubernetes-e2e-kind/1384891802225479680/artifacts/logs/kind-control-plane/pods/kube-system_kube-controller-manager-kind-control-plane_56169297aee2954c7abe860153c5f2e5/kube-controller-manager/time-removed/
+Starting Drain3 template miner
+Loading configuration from drain3.ini
+Checking for saved state
+Saved state not found
+content:  Finished syncing namespace "configmap-7708" (7.098417ms)
+old template:  Finished syncing namespace configmap-7708 (3.360445ms)
+new template:  Finished syncing namespace configmap-7708 <*> 
+
+content:  QuotaMonitor process object: /v1, Resource=configmaps, namespace configmap-7708, name kube-root-ca.crt, uid <UID>, event type delete
+old template:  QuotaMonitor process object: /v1 Resource configmaps namespace configmap-7708 name immutable uid <UID> event type delete
+new template:  QuotaMonitor process object: /v1 Resource configmaps namespace configmap-7708 name <*> uid <UID> event type delete 
+
+content:  QuotaMonitor process object: /v1, Resource=serviceaccounts, namespace configmap-7708, name default, uid <UID>, event type delete
+old template:  QuotaMonitor process object: /v1 Resource configmaps namespace configmap-7708 name <*> uid <UID> event type delete
+new template:  QuotaMonitor process object: /v1 Resource <*> namespace configmap-7708 name <*> uid <UID> event type delete 
+
+content:  Finished syncing namespace "security-context-test-9697" (8.192419ms)
+old template:  Finished syncing namespace configmap-7708 <*>
+new template:  Finished syncing namespace <*> <*> 
+
+content:  QuotaMonitor process object: /v1, Resource=pods, namespace security-context-test-9697, name alpine-nnp-true-<UID>, uid <UID>, event type update
+old template:  QuotaMonitor process object: /v1 Resource <*> namespace configmap-7708 name <*> uid <UID> event type delete
+new template:  QuotaMonitor process object: /v1 Resource <*> namespace <*> name <*> uid <UID> event type <*> 
+
+content:  namespace controller - deleteAllContent - namespace: security-context-test-9697
+old template:  namespace controller - deleteAllContent - namespace: configmap-7708
+new template:  namespace controller - deleteAllContent - namespace: <*> 
+
+content:  QuotaMonitor process object: events.k8s.io/v1, Resource=events, namespace security-context-test-9697, name alpine-nnp-true-<UID>.1677ea93fc68c70a, uid <UID>, event type delete
+old template:  QuotaMonitor process object: /v1 Resource <*> namespace <*> name <*> uid <UID> event type <*>
+new template:  QuotaMonitor process object: <*> Resource <*> namespace <*> name <*> uid <UID> event type <*> 
+
+content:  syncServiceAccount(security-context-test-9697/default), service account deleted, removing tokens
+old template:  syncServiceAccount(configmap-7708/default) service account deleted removing tokens
+new template:  <*> service account deleted removing tokens 
+
+content:  "Noticed pod deletion" pod="security-context-test-9697/alpine-nnp-true-<UID>"
+old template:  Noticed pod update pod security-context-test-9697/alpine-nnp-true-<UID>
+new template:  Noticed pod <*> pod security-context-test-9697/alpine-nnp-true-<UID> 
+
+content:  namespace controller - deleteAllContent - namespace: security-context-test-9697, estimate: 0, errors: <nil>
+old template:  namespace controller - deleteAllContent - namespace: configmap-7708 estimate: 0 errors: <nil>
+new template:  namespace controller - deleteAllContent - namespace: <*> estimate: 0 errors: <nil> 
+
+content:  Namespace has been deleted security-context-test-9697
+old template:  Namespace has been deleted configmap-7708
+new template:  Namespace has been deleted <*> 
+
+content:  "Enqueuing PVCs for Pod" pod="emptydir-4249/pod-<UID>" podUID=<UID>
+old template:  Enqueuing PVCs for Pod pod security-context-test-9697/alpine-nnp-true-<UID> podUID <UID>
+new template:  Enqueuing PVCs for Pod pod <*> podUID <UID> 
+
+content:  "Noticed pod update" pod="emptydir-4249/pod-<UID>"
+old template:  Noticed pod <*> pod security-context-test-9697/alpine-nnp-true-<UID>
+new template:  Noticed pod <*> pod <*> 
+
+content:  "Pod deleted" pod="emptydir-4249/pod-<UID>"
+old template:  Pod deleted pod security-context-test-9697/alpine-nnp-true-<UID>
+new template:  Pod deleted pod <*> 
+
+content:  Finished syncing service "pods-8163/fooservice" endpoint slices. (203.132µs)
+old template:  Finished syncing service pods-8163/fooservice endpoint slices. (8.52849ms)
+new template:  Finished syncing service pods-8163/fooservice endpoint slices. <*> 
+
+content:  Finished syncing EndpointSlices for "pods-8163/fooservice" Endpoints. (83.331µs)
+old template:  Finished syncing EndpointSlices for pods-8163/fooservice Endpoints. (2.495035ms)
+new template:  Finished syncing EndpointSlices for pods-8163/fooservice Endpoints. <*> 
+
+content:  Finished syncing service "pods-8163/fooservice" endpoints. (5.655038ms)
+old template:  Finished syncing service pods-8163/fooservice endpoints. (7.932943ms)
+new template:  Finished syncing service pods-8163/fooservice endpoints. <*> 
+
+content:  error synchronizing serviceaccount pods-8163/default: secrets "default-token-nln25" is forbidden: unable to create new content in namespace pods-8163 because it is being terminated
+old template:  error synchronizing serviceaccount security-context-test-9697/default: secrets default-token-krvjb is forbidden: unable to create new content in namespace security-context-test-9697 because it is being terminated
+new template:  error synchronizing serviceaccount <*> secrets <*> is forbidden: unable to create new content in namespace <*> because it is being terminated 
+
+content:  namespace controller - deleteAllContent - namespace: pods-8163, estimate: 30, errors: <nil>
+old template:  namespace controller - deleteAllContent - namespace: <*> estimate: 0 errors: <nil>
+new template:  namespace controller - deleteAllContent - namespace: <*> estimate: <*> errors: <nil> 
+
+content:  updating PersistentVolume[local-jch9b]: bound to "provisioning-7441/pvc-mpp9h"
+old template:  updating PersistentVolume local-jch9b : binding to provisioning-7441/pvc-mpp9h
+new template:  updating PersistentVolume local-jch9b : <*> to provisioning-7441/pvc-mpp9h 
+
+content:  synchronizing PersistentVolume[local-jch9b]: phase: Bound, bound to: "provisioning-7441/pvc-mpp9h (uid: <UID>)", boundByController: true
+old template:  synchronizing PersistentVolume local-jch9b : phase: Available bound to: provisioning-7441/pvc-mpp9h (uid: <UID>) boundByController: true
+new template:  synchronizing PersistentVolume local-jch9b : phase: <*> bound to: provisioning-7441/pvc-mpp9h (uid: <UID>) boundByController: true 
+
+content:  storeObjectUpdate updating claim "provisioning-7441/pvc-mpp9h" with version 19546
+old template:  storeObjectUpdate updating claim provisioning-7441/pvc-mpp9h with version 19326
+new template:  storeObjectUpdate updating claim provisioning-7441/pvc-mpp9h with version <*> 
+
+content:  updating PersistentVolumeClaim[provisioning-7441/pvc-mpp9h]: bound to "local-jch9b"
+old template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h : binding to local-jch9b
+new template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h : <*> to local-jch9b 
+
+content:  updating PersistentVolumeClaim[provisioning-7441/pvc-mpp9h] status: set phase Bound
+old template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h : <*> to local-jch9b
+new template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h <*> <*> <*> <*> 
+
+content:  "Finished processing PVC" PVC="provisioning-7441/pvc-mpp9h" duration="5.71µs"
+old template:  Finished processing PVC PVC provisioning-7441/pvc-mpp9h duration 7.623µs
+new template:  Finished processing PVC PVC provisioning-7441/pvc-mpp9h duration <*> 
+
+content:  "Looking for Pods using PVC with a live list" PVC="provisioning-7441/pvc-mpp9h"
+old template:  Looking for Pods using PVC in the Informer's cache PVC provisioning-7441/pvc-mpp9h
+new template:  Looking for Pods using PVC <*> <*> <*> <*> PVC provisioning-7441/pvc-mpp9h 
+
+content:  Content remaining in namespace projected-7632, waiting 16 seconds
+old template:  Content remaining in namespace pods-8163 waiting 16 seconds
+new template:  Content remaining in namespace <*> waiting 16 seconds 
+
+content:  Update endpoints for nettest-8008/node-port-service, ready: 4 not ready: 0
+old template:  Update endpoints for pods-8163/fooservice ready: 1 not ready: 0
+new template:  Update endpoints for <*> ready: <*> not ready: 0 
+
+content:  Finished syncing service "nettest-8008/node-port-service" endpoint slices. (5.365235ms)
+old template:  Finished syncing service pods-8163/fooservice endpoint slices. <*>
+new template:  Finished syncing service <*> endpoint slices. <*> 
+
+content:  syncEndpoints("nettest-8008/node-port-service")
+old template:  syncEndpoints( pods-8163/fooservice )
+new template:  syncEndpoints( <*> ) 
+
+content:  Finished syncing EndpointSlices for "nettest-8008/node-port-service" Endpoints. (57.713µs)
+old template:  Finished syncing EndpointSlices for pods-8163/fooservice Endpoints. <*>
+new template:  Finished syncing EndpointSlices for <*> Endpoints. <*> 
+
+content:  Finished syncing service "nettest-8008/node-port-service" endpoints. (8.784275ms)
+old template:  Finished syncing service pods-8163/fooservice endpoints. <*>
+new template:  Finished syncing service <*> endpoints. <*> 
+
+content:  nettest-8008/node-port-service Endpoints not found, cleaning up any mirrored EndpointSlices
+old template:  pods-8163/fooservice Endpoints not found cleaning up any mirrored EndpointSlices
+new template:  <*> Endpoints not found cleaning up any mirrored EndpointSlices 
+
+content:  synchronizing PersistentVolume[local-pvlzc4f]: phase: Released, bound to: "persistent-local-volumes-test-7484/pvc-xqzf9 (uid: <UID>)", boundByController: true
+old template:  synchronizing PersistentVolume local-jch9b : phase: <*> bound to: provisioning-7441/pvc-mpp9h (uid: <UID>) boundByController: true
+new template:  synchronizing PersistentVolume <*> : phase: <*> bound to: <*> (uid: <UID>) boundByController: true 
+
+content:  synchronizing PersistentVolume[local-pvlzc4f]: volume is bound to claim persistent-local-volumes-test-7484/pvc-xqzf9
+old template:  synchronizing PersistentVolume local-jch9b : volume is bound to claim provisioning-7441/pvc-mpp9h
+new template:  synchronizing PersistentVolume <*> : volume is bound to claim <*> 
+
+content:  synchronizing PersistentVolume[local-pvlzc4f]: claim persistent-local-volumes-test-7484/pvc-xqzf9 not found
+old template:  synchronizing PersistentVolume local-jch9b : claim provisioning-7441/pvc-mpp9h not found
+new template:  synchronizing PersistentVolume <*> : claim <*> not found 
+
+content:  PersistentVolume[local-pvlzc4f] references a claim "persistent-local-volumes-test-7484/pvc-xqzf9" (<UID>) that is not found
+old template:  PersistentVolume local-jch9b references a claim provisioning-7441/pvc-mpp9h (<UID>) that is not found
+new template:  PersistentVolume <*> references a claim <*> (<UID>) that is not found 
+
+content:  Finished syncing ReplicationController "kubectl-8297/agnhost-primary" (13.898634ms)
+old template:  Finished syncing namespace <*> <*>
+new template:  Finished syncing <*> <*> <*> 
+
+content:  Updating status for : kubectl-8297/agnhost-primary, replicas 0->1 (need 1), fullyLabeledReplicas 0->1, readyReplicas 0->0, availableReplicas 0->0, sequence No: 1->1
+old template:  Updating status for : kubectl-8297/agnhost-primary replicas 0->0 (need 1) fullyLabeledReplicas 0->0 readyReplicas 0->0 availableReplicas 0->0 sequence No: 0->1
+new template:  Updating status for : kubectl-8297/agnhost-primary replicas <*> (need 1) fullyLabeledReplicas <*> readyReplicas 0->0 availableReplicas 0->0 sequence No: <*> 
+
+content:  Updating status for : kubectl-8297/agnhost-primary, replicas 1->1 (need 1), fullyLabeledReplicas 1->1, readyReplicas 0->1, availableReplicas 0->1, sequence No: 1->1
+old template:  Updating status for : kubectl-8297/agnhost-primary replicas <*> (need 1) fullyLabeledReplicas <*> readyReplicas 0->0 availableReplicas 0->0 sequence No: <*>
+new template:  Updating status for : kubectl-8297/agnhost-primary replicas <*> (need 1) fullyLabeledReplicas <*> readyReplicas <*> availableReplicas <*> sequence No: <*> 
+
+content:  Setting expectations &controller.ControlleeExpectations{add:1, del:0, key:"kubectl-8297/agnhost-primary", timestamp:time.Time{wall:<HEX>, ext:771336830757, loc:(*time.Location)(<HEX>)}}
+old template:  Setting expectations &controller.ControlleeExpectations{add:1 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> ext:746215921972 loc:(*time.Location)(<HEX>)}}
+new template:  Setting expectations &controller.ControlleeExpectations{add:1 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  "Processing object" object="kubectl-8297/agnhost-primary-9pbfn" objectUID=<UID> kind="Pod" virtual=false
+old template:  Processing object object pods-8163/fooservice-wh9qw objectUID <UID> kind EndpointSlice virtual false
+new template:  Processing object object <*> objectUID <UID> kind <*> virtual false 
+
+content:  "Deleting object" object="kubectl-8297/agnhost-primary-r4s9k" objectUID=<UID> kind="EndpointSlice" propagationPolicy=Background
+old template:  Deleting object object pods-8163/fooservice-wh9qw objectUID <UID> kind EndpointSlice propagationPolicy Background
+new template:  Deleting object object <*> objectUID <UID> kind EndpointSlice propagationPolicy Background 
+
+content:  Syncing StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin with 1 pods
+old template:  Syncing StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin with 0 pods
+new template:  Syncing StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin with <*> pods 
+
+content:  "Got event on PVC" csi-mock-volumes-2753/pvc-mtdbt="(MISSING)"
+old template:  Got event on PVC provisioning-7441/pvc-mpp9h (MISSING)
+new template:  Got event on PVC <*> (MISSING) 
+
+content:  storeObjectUpdate: adding claim "csi-mock-volumes-2753/pvc-mtdbt", version 36975
+old template:  storeObjectUpdate: adding claim provisioning-7441/pvc-mpp9h version 19326
+new template:  storeObjectUpdate: adding claim <*> version <*> 
+
+content:  synchronizing PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: phase: Pending, bound to: "", bindCompleted: false, boundByController: false
+old template:  synchronizing PersistentVolumeClaim provisioning-7441/pvc-mpp9h : phase: Pending bound to: bindCompleted: false boundByController: false
+new template:  synchronizing PersistentVolumeClaim <*> : phase: Pending bound to: bindCompleted: false boundByController: false 
+
+content:  synchronizing unbound PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: no volume found
+old template:  synchronizing unbound PersistentVolumeClaim provisioning-7441/pvc-mpp9h : no volume found
+new template:  synchronizing unbound PersistentVolumeClaim <*> : no volume found 
+
+content:  provisionClaim[csi-mock-volumes-2753/pvc-mtdbt]: started
+old template:  provisionClaim provisioning-7441/pvc-mpp9h : started
+new template:  provisionClaim <*> : started 
+
+content:  storeObjectUpdate updating claim "csi-mock-volumes-2753/pvc-mtdbt" with version 36976
+old template:  storeObjectUpdate updating claim provisioning-7441/pvc-mpp9h with version <*>
+new template:  storeObjectUpdate updating claim <*> with version <*> 
+
+content:  synchronizing PersistentVolume[pvc-<UID>]: phase: Pending, bound to: "csi-mock-volumes-2753/pvc-mtdbt (uid: <UID>)", boundByController: false
+old template:  synchronizing PersistentVolume <*> : phase: <*> bound to: <*> (uid: <UID>) boundByController: true
+new template:  synchronizing PersistentVolume <*> : phase: <*> bound to: <*> (uid: <UID>) boundByController: <*> 
+
+content:  synchronizing PersistentVolume[pvc-<UID>]: claim csi-mock-volumes-2753/pvc-mtdbt found: phase: Pending, bound to: "", bindCompleted: false, boundByController: false
+old template:  synchronizing PersistentVolume local-jch9b : claim provisioning-7441/pvc-mpp9h found: phase: Pending bound to: bindCompleted: false boundByController: false
+new template:  synchronizing PersistentVolume <*> : claim <*> found: phase: Pending bound to: bindCompleted: false boundByController: false 
+
+content:  binding volume "pvc-<UID>" to claim "csi-mock-volumes-2753/pvc-mtdbt"
+old template:  binding volume local-jch9b to claim provisioning-7441/pvc-mpp9h
+new template:  binding volume <*> to claim <*> 
+
+content:  updating PersistentVolume[pvc-<UID>]: binding to "csi-mock-volumes-2753/pvc-mtdbt"
+old template:  updating PersistentVolume local-jch9b : <*> to provisioning-7441/pvc-mpp9h
+new template:  updating PersistentVolume <*> : <*> to <*> 
+
+content:  updating PersistentVolume[pvc-<UID>]: already bound to "csi-mock-volumes-2753/pvc-mtdbt"
+old template:  updating PersistentVolume local-jch9b : already bound to provisioning-7441/pvc-mpp9h
+new template:  updating PersistentVolume <*> : already bound to <*> 
+
+content:  volume "pvc-<UID>" bound to claim "csi-mock-volumes-2753/pvc-mtdbt"
+old template:  volume local-jch9b bound to claim provisioning-7441/pvc-mpp9h
+new template:  volume <*> bound to claim <*> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim csi-mock-volumes-2753/pvc-mtdbt : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-2753/pvc-mtdbt : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt] status: set phase Bound
+old template:  updating PersistentVolumeClaim csi-mock-volumes-2753/pvc-mtdbt : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-2753/pvc-mtdbt <*> <*> <*> <*> 
+
+content:  claim "csi-mock-volumes-2753/pvc-mtdbt" entered phase "Bound"
+old template:  claim provisioning-7441/pvc-mpp9h entered phase Bound
+new template:  claim <*> entered phase Bound 
+
+content:  volume "pvc-<UID>" status after binding: phase: Bound, bound to: "csi-mock-volumes-2753/pvc-mtdbt (uid: <UID>)", boundByController: false
+old template:  volume local-jch9b status after binding: phase: Bound bound to: provisioning-7441/pvc-mpp9h (uid: <UID>) boundByController: true
+new template:  volume <*> status after binding: phase: Bound bound to: <*> (uid: <UID>) boundByController: <*> 
+
+content:  claim "csi-mock-volumes-2753/pvc-mtdbt" status after binding: phase: Bound, bound to: "pvc-<UID>", bindCompleted: true, boundByController: true
+old template:  claim provisioning-7441/pvc-mpp9h status after binding: phase: Bound bound to: local-jch9b bindCompleted: true boundByController: true
+new template:  claim <*> status after binding: phase: Bound bound to: <*> bindCompleted: true boundByController: true 
+
+content:  synchronizing PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: phase: Bound, bound to: "pvc-<UID>", bindCompleted: true, boundByController: true
+old template:  synchronizing PersistentVolumeClaim provisioning-7441/pvc-mpp9h : phase: Bound bound to: local-jch9b bindCompleted: true boundByController: true
+new template:  synchronizing PersistentVolumeClaim <*> : phase: Bound bound to: <*> bindCompleted: true boundByController: true 
+
+content:  synchronizing bound PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: volume "pvc-<UID>" found: phase: Bound, bound to: "csi-mock-volumes-2753/pvc-mtdbt (uid: <UID>)", boundByController: false
+old template:  synchronizing bound PersistentVolumeClaim provisioning-7441/pvc-mpp9h : volume local-jch9b found: phase: Bound bound to: provisioning-7441/pvc-mpp9h (uid: <UID>) boundByController: true
+new template:  synchronizing bound PersistentVolumeClaim <*> : volume <*> found: phase: Bound bound to: <*> (uid: <UID>) boundByController: <*> 
+
+content:  synchronizing bound PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: claim is already correctly bound
+old template:  synchronizing bound PersistentVolumeClaim provisioning-7441/pvc-mpp9h : claim is already correctly bound
+new template:  synchronizing bound PersistentVolumeClaim <*> : claim is already correctly bound 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt]: already bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h : already bound to local-jch9b
+new template:  updating PersistentVolumeClaim <*> : already bound to <*> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-2753/pvc-mtdbt] status: phase Bound already set
+old template:  updating PersistentVolumeClaim provisioning-7441/pvc-mpp9h status: phase Bound already set
+new template:  updating PersistentVolumeClaim <*> status: phase Bound already set 
+
+content:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin pod status replicas=1 ready=1 current=1 updated=1
+old template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin pod status replicas 1 ready 0 current 1 updated 1
+new template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin pod status replicas 1 ready <*> current 1 updated 1 
+
+content:  "Processing PVC" PVC="csi-mock-volumes-2753/pvc-mtdbt"
+old template:  Processing PVC PVC provisioning-7441/pvc-mpp9h
+new template:  Processing PVC PVC <*> 
+
+content:  "Finished processing PVC" PVC="csi-mock-volumes-2753/pvc-mtdbt" duration="6.957µs"
+old template:  Finished processing PVC PVC provisioning-7441/pvc-mpp9h duration <*>
+new template:  Finished processing PVC PVC <*> duration <*> 
+
+content:  synchronizing PersistentVolume[pvc-<UID>]: claim csi-mock-volumes-2753/pvc-mtdbt found: phase: Bound, bound to: "pvc-<UID>", bindCompleted: true, boundByController: true
+old template:  synchronizing PersistentVolume local-jch9b : claim provisioning-7441/pvc-mpp9h found: phase: Bound bound to: local-jch9b bindCompleted: true boundByController: true
+new template:  synchronizing PersistentVolume <*> : claim <*> found: phase: Bound bound to: <*> bindCompleted: true boundByController: true 
+
+content:  "Looking for Pods using PVC in the Informer's cache" PVC="csi-mock-volumes-2753/pvc-mtdbt"
+old template:  Looking for Pods using PVC <*> <*> <*> <*> PVC provisioning-7441/pvc-mpp9h
+new template:  Looking for Pods using PVC <*> <*> <*> <*> PVC <*> 
+
+content:  "No Pod using PVC was found in the Informer's cache" PVC="csi-mock-volumes-2753/pvc-mtdbt"
+old template:  No Pod using PVC was found in the Informer's cache PVC provisioning-7441/pvc-mpp9h
+new template:  No Pod using PVC was found in the Informer's cache PVC <*> 
+
+content:  "PVC is unused" PVC="csi-mock-volumes-2753/pvc-mtdbt"
+old template:  PVC is unused PVC provisioning-7441/pvc-mpp9h
+new template:  PVC is unused PVC <*> 
+
+content:  "Removed protection finalizer from PVC" PVC="csi-mock-volumes-2753/pvc-mtdbt"
+old template:  Removed protection finalizer from PVC PVC provisioning-7441/pvc-mpp9h
+new template:  Removed protection finalizer from PVC PVC <*> 
+
+content:  claim "csi-mock-volumes-2753/pvc-mtdbt" deleted
+old template:  claim provisioning-7441/pvc-mpp9h deleted
+new template:  claim <*> deleted 
+
+Processing line: 200, rate 400.4 lines/sec, 86 clusters so far.
+content:  deletion of claim "csi-mock-volumes-2753/pvc-mtdbt" was already processed
+old template:  deletion of claim provisioning-7441/pvc-mpp9h was already processed
+new template:  deletion of claim <*> was already processed 
+
+content:  "Deleting object" object="csi-mock-volumes-2753-2870/csi-mockplugin-789f8f47f8" objectUID=<UID> kind="ControllerRevision" propagationPolicy=Background
+old template:  Deleting object object <*> objectUID <UID> kind EndpointSlice propagationPolicy Background
+new template:  Deleting object object <*> objectUID <UID> kind <*> propagationPolicy Background 
+
+content:  Finished syncing resource quota "resourcequota-3233/test-quota" (6.29322ms)
+old template:  Finished syncing resource quota resourcequota-3233/test-quota (5.119782ms)
+new template:  Finished syncing resource quota resourcequota-3233/test-quota <*> 
+
+content:  synchronizing unbound PersistentVolumeClaim[persistent-local-volumes-test-7819/pvc-7wrkk]: volume "local-pvfq72m" found: phase: Available, bound to: "", boundByController: false
+old template:  synchronizing unbound PersistentVolumeClaim provisioning-7441/pvc-mpp9h : volume local-jch9b found: phase: Available bound to: boundByController: false
+new template:  synchronizing unbound PersistentVolumeClaim <*> : volume <*> found: phase: Available bound to: boundByController: false 
+
+content:  claim "persistent-local-volumes-test-7819/pvc-7wrkk" bound to volume "local-pvfq72m"
+old template:  claim provisioning-7441/pvc-mpp9h bound to volume local-jch9b
+new template:  claim <*> bound to volume <*> 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-7819/pvc-7wrkk]: bound to "local-pvfq72m"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-7819/pvc-7wrkk : binding to local-pvfq72m
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-7819/pvc-7wrkk : <*> to local-pvfq72m 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-7819/pvc-7wrkk] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-7819/pvc-7wrkk : <*> to local-pvfq72m
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-7819/pvc-7wrkk <*> <*> <*> <*> 
+
+content:  "cronjob not found, may be it is deleted" cronjob="gc-5952/simple" err="cronjob.batch \"simple\" not found"
+old template:  cronjob not found may be it is deleted cronjob kubectl-2130/cronjob-test err cronjob.batch \ cronjob-test\ not found
+new template:  cronjob not found may be it is deleted cronjob <*> err cronjob.batch \ <*> not found 
+
+content:  "Started syncing deployment" deployment="deployment-2366/test-rollover-deployment" startTime="<DATE> <TIME> +0000 UTC m=+1128.766037775"
+old template:  Started syncing deployment deployment webhook-3088/sample-webhook-deployment startTime <DATE> <TIME> +0000 UTC m +780.766266497
+new template:  Started syncing deployment deployment <*> startTime <DATE> <TIME> +0000 UTC m <*> 
+
+content:  "Deployment has been deleted" deployment="deployment-2366/test-rollover-deployment"
+old template:  Deployment has been deleted deployment webhook-3088/sample-webhook-deployment
+new template:  Deployment has been deleted deployment <*> 
+
+content:  "Finished syncing deployment" deployment="deployment-2366/test-rollover-deployment" duration="203.082µs"
+old template:  Finished syncing deployment deployment webhook-3088/sample-webhook-deployment duration 102.462µs
+new template:  Finished syncing deployment deployment <*> duration <*> 
+
+content:  Finished syncing resource quota "replicaset-8143/condition-test" (10.085618ms)
+old template:  Finished syncing resource quota resourcequota-3233/test-quota <*>
+new template:  Finished syncing resource quota <*> <*> 
+
+content:  Controller replicaset-8143/condition-test either never recorded expectations, or the ttl expired.
+old template:  Controller kubectl-8297/agnhost-primary either never recorded expectations or the ttl expired.
+new template:  Controller <*> either never recorded expectations or the ttl expired. 
+
+content:  Setting expectations &controller.ControlleeExpectations{add:3, del:0, key:"replicaset-8143/condition-test", timestamp:time.Time{wall:<HEX>, ext:1091953276599, loc:(*time.Location)(<HEX>)}}
+old template:  Setting expectations &controller.ControlleeExpectations{add:1 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Setting expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  "Too few replicas" replicaSet="replicaset-8143/condition-test" need=3 creating=3
+old template:  Too few replicas replicaSet kubectl-8297/agnhost-primary need 1 creating 1
+new template:  Too few replicas replicaSet <*> need <*> creating <*> 
+
+content:  "Event occurred" object="replicaset-8143/condition-test" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="Created pod: condition-test-gl86t"
+old template:  Event occurred object kubectl-8297/agnhost-primary kind ReplicationController apiVersion v1 type Normal reason SuccessfulCreate message Created pod: agnhost-primary-9pbfn
+new template:  Event occurred object <*> kind <*> apiVersion <*> type Normal reason SuccessfulCreate message Created pod: <*> 
+
+content:  Lowered expectations &controller.ControlleeExpectations{add:2, del:0, key:"replicaset-8143/condition-test", timestamp:time.Time{wall:<HEX>, ext:1091953276599, loc:(*time.Location)(<HEX>)}}
+old template:  Lowered expectations &controller.ControlleeExpectations{add:0 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> ext:746215921972 loc:(*time.Location)(<HEX>)}}
+new template:  Lowered expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  Updating status for : replicaset-8143/condition-test, replicas 0->0 (need 3), fullyLabeledReplicas 0->0, readyReplicas 0->0, availableReplicas 0->0, sequence No: 0->1
+old template:  Updating status for : kubectl-8297/agnhost-primary replicas <*> (need 1) fullyLabeledReplicas <*> readyReplicas <*> availableReplicas <*> sequence No: <*>
+new template:  Updating status for : <*> replicas <*> (need <*> fullyLabeledReplicas <*> readyReplicas <*> availableReplicas <*> sequence No: <*> 
+
+content:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0, del:0, key:"replicaset-8143/condition-test", timestamp:time.Time{wall:<HEX>, ext:1091953276599, loc:(*time.Location)(<HEX>)}}
+old template:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> ext:746215921972 loc:(*time.Location)(<HEX>)}}
+new template:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0 del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  "Event occurred" object="replicaset-8143/condition-test" kind="ReplicaSet" apiVersion="apps/v1" type="Warning" reason="FailedCreate" message="Error creating: pods \"condition-test-cccqs\" is forbidden: exceeded quota: condition-test, requested: pods=1, used: pods=2, limited: pods=2"
+old template:  Event occurred object replicaset-8143/condition-test kind ReplicaSet apiVersion apps/v1 type Warning reason FailedCreate message Error creating: pods \ condition-test-qxlxx\ is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2
+new template:  Event occurred object replicaset-8143/condition-test kind ReplicaSet apiVersion apps/v1 type Warning reason FailedCreate message Error creating: pods \ <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2 
+
+content:  sync "replicaset-8143/condition-test" failed with pods "condition-test-cccqs" is forbidden: exceeded quota: condition-test, requested: pods=1, used: pods=2, limited: pods=2
+old template:  sync replicaset-8143/condition-test failed with pods condition-test-qxlxx is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2
+new template:  sync replicaset-8143/condition-test failed with pods <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2 
+
+content:  Resource quota has been deleted replicaset-8143/condition-test
+old template:  Resource quota has been deleted resourcequota-3233/test-quota
+new template:  Resource quota has been deleted <*> 
+
+content:  Ignoring inactive pod replicaset-8143/condition-test-gl86t in state Pending, deletion time <DATE> <TIME> UTC
+old template:  Ignoring inactive pod kubectl-8297/agnhost-primary-9pbfn in state Running deletion time <DATE> <TIME> UTC
+new template:  Ignoring inactive pod <*> in state <*> deletion time <DATE> <TIME> UTC 
+
+content:  Controller still waiting on expectations &controller.ControlleeExpectations{add:1, del:0, key:"replicaset-8143/condition-test", timestamp:time.Time{wall:<HEX>, ext:1099091424833, loc:(*time.Location)(<HEX>)}}
+old template:  Controller still waiting on expectations &controller.ControlleeExpectations{add:1 del:0 key: kubectl-8297/agnhost-primary timestamp:time.Time{wall:<HEX> ext:771336830757 loc:(*time.Location)(<HEX>)}}
+new template:  Controller still waiting on expectations &controller.ControlleeExpectations{add:1 del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  error finding provisioning plugin for claim provisioning-7423/pvc-mftgt: storageclass.storage.k8s.io "provisioning-7423" not found
+old template:  error finding provisioning plugin for claim provisioning-7441/pvc-mpp9h: storageclass.storage.k8s.io provisioning-7441 not found
+new template:  error finding provisioning plugin for claim <*> storageclass.storage.k8s.io <*> not found 
+
+content:  "Event occurred" object="provisioning-7423/pvc-mftgt" kind="PersistentVolumeClaim" apiVersion="v1" type="Warning" reason="ProvisioningFailed" message="storageclass.storage.k8s.io \"provisioning-7423\" not found"
+old template:  Event occurred object provisioning-7441/pvc-mpp9h kind PersistentVolumeClaim apiVersion v1 type Warning reason ProvisioningFailed message storageclass.storage.k8s.io \ provisioning-7441\ not found
+new template:  Event occurred object <*> kind PersistentVolumeClaim apiVersion v1 type Warning reason ProvisioningFailed message storageclass.storage.k8s.io \ <*> not found 
+
+content:  updating PersistentVolumeClaim[provisioning-7423/pvc-mftgt]: bound to "local-mcvd2"
+old template:  updating PersistentVolumeClaim provisioning-7423/pvc-mftgt : binding to local-mcvd2
+new template:  updating PersistentVolumeClaim provisioning-7423/pvc-mftgt : <*> to local-mcvd2 
+
+content:  updating PersistentVolumeClaim[provisioning-7423/pvc-mftgt] status: set phase Bound
+old template:  updating PersistentVolumeClaim provisioning-7423/pvc-mftgt : <*> to local-mcvd2
+new template:  updating PersistentVolumeClaim provisioning-7423/pvc-mftgt <*> <*> <*> <*> 
+
+Processing line: 200, rate 17214.5 lines/sec, 106 clusters so far.
+Processing line: 400, rate 13610.4 lines/sec, 106 clusters so far.
+content:  Syncing StatefulSet volumemode-8932-8944/csi-hostpath-attacher with 0 pods
+old template:  Syncing StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin with <*> pods
+new template:  Syncing StatefulSet <*> with <*> pods 
+
+content:  StatefulSet volumemode-8932-8944/csi-hostpath-attacher has 1 unhealthy Pods starting with csi-hostpath-attacher-0
+old template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin has 1 unhealthy Pods starting with csi-mockplugin-0
+new template:  StatefulSet <*> has 1 unhealthy Pods starting with <*> 
+
+content:  "Event occurred" object="volumemode-8932-8944/csi-hostpath-attacher" kind="StatefulSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="create Pod csi-hostpath-attacher-0 in StatefulSet csi-hostpath-attacher successful"
+old template:  Event occurred object csi-mock-volumes-2753-2870/csi-mockplugin kind StatefulSet apiVersion apps/v1 type Normal reason SuccessfulCreate message create Pod csi-mockplugin-0 in StatefulSet csi-mockplugin successful
+new template:  Event occurred object <*> kind StatefulSet apiVersion apps/v1 type Normal reason SuccessfulCreate message create Pod <*> in StatefulSet <*> successful 
+
+content:  StatefulSet volumemode-8932-8944/csi-hostpath-attacher pod status replicas=1 ready=0 current=1 updated=1
+old template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin pod status replicas 1 ready <*> current 1 updated 1
+new template:  StatefulSet <*> pod status replicas 1 ready <*> current 1 updated 1 
+
+content:  StatefulSet volumemode-8932-8944/csi-hostpath-attacher revisions current=csi-hostpath-attacher-6554676579 update=csi-hostpath-attacher-6554676579
+old template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin revisions current csi-mockplugin-789f8f47f8 update csi-mockplugin-789f8f47f8
+new template:  StatefulSet <*> revisions current <*> update <*> 
+
+content:  Successfully synced StatefulSet volumemode-8932-8944/csi-hostpath-attacher successful
+old template:  Successfully synced StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin successful
+new template:  Successfully synced StatefulSet <*> successful 
+
+content:  StatefulSet volumemode-8932-8944/csi-hostpath-attacher is waiting for Pod csi-hostpath-attacher-0 to be Running and Ready
+old template:  StatefulSet csi-mock-volumes-2753-2870/csi-mockplugin is waiting for Pod csi-mockplugin-0 to be Running and Ready
+new template:  StatefulSet <*> is waiting for Pod <*> to be Running and Ready 
+
+content:  scheduleOperation[provision-volumemode-8932/csi-hostpathp78wp[<UID>]]
+old template:  scheduleOperation provision-csi-mock-volumes-2753/pvc-mtdbt <UID>
+new template:  scheduleOperation <*> <UID> 
+
+content:  provisionClaimOperationExternal [volumemode-8932/csi-hostpathp78wp] started, class: "volumemode-8932t4d6d"
+old template:  provisionClaimOperationExternal csi-mock-volumes-2753/pvc-mtdbt started class: csi-mock-volumes-2753-sc4mnsk
+new template:  provisionClaimOperationExternal <*> started class: <*> 
+
+content:  provisionClaimOperationExternal provisioning claim "volumemode-8932/csi-hostpathp78wp": waiting for a volume to be created, either by external provisioner "csi-hostpath-volumemode-8932" or manually created by system administrator
+old template:  provisionClaimOperationExternal provisioning claim csi-mock-volumes-2753/pvc-mtdbt : waiting for a volume to be created either by external provisioner csi-mock-csi-mock-volumes-2753 or manually created by system administrator
+new template:  provisionClaimOperationExternal provisioning claim <*> : waiting for a volume to be created either by external provisioner <*> or manually created by system administrator 
+
+content:  "Event occurred" object="volumemode-8932/csi-hostpathp78wp" kind="PersistentVolumeClaim" apiVersion="v1" type="Normal" reason="ExternalProvisioning" message="waiting for a volume to be created, either by external provisioner \"csi-hostpath-volumemode-8932\" or manually created by system administrator"
+old template:  Event occurred object csi-mock-volumes-2753/pvc-mtdbt kind PersistentVolumeClaim apiVersion v1 type Normal reason ExternalProvisioning message waiting for a volume to be created either by external provisioner \ csi-mock-csi-mock-volumes-2753\ or manually created by system administrator
+new template:  Event occurred object <*> kind PersistentVolumeClaim apiVersion v1 type Normal reason ExternalProvisioning message waiting for a volume to be created either by external provisioner \ <*> or manually created by system administrator 
+
+content:  synchronizing unbound PersistentVolumeClaim[volumemode-8932/csi-hostpathp78wp]: volume "pvc-<UID>" found: phase: Pending, bound to: "volumemode-8932/csi-hostpathp78wp (uid: <UID>)", boundByController: false
+old template:  synchronizing unbound PersistentVolumeClaim csi-mock-volumes-2753/pvc-mtdbt : volume pvc-<UID> found: phase: Pending bound to: csi-mock-volumes-2753/pvc-mtdbt (uid: <UID>) boundByController: false
+new template:  synchronizing unbound PersistentVolumeClaim <*> : volume pvc-<UID> found: phase: Pending bound to: <*> (uid: <UID>) boundByController: false 
+
+content:  updating PersistentVolumeClaim[volumemode-8932/csi-hostpathp78wp]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim volumemode-8932/csi-hostpathp78wp : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim volumemode-8932/csi-hostpathp78wp : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[volumemode-8932/csi-hostpathp78wp] status: set phase Bound
+old template:  updating PersistentVolumeClaim volumemode-8932/csi-hostpathp78wp : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim volumemode-8932/csi-hostpathp78wp <*> <*> <*> <*> 
+
+Processing line: 200, rate 980.0 lines/sec, 108 clusters so far.
+content:  "Event occurred" object="volumemode-8932/pod-<UID>" kind="Pod" apiVersion="v1" type="Normal" reason="SuccessfulAttachVolume" message="AttachVolume.Attach succeeded for volume \"pvc-<UID>\" "
+old template:  Event occurred object persistent-local-volumes-test-7819/pvc-7wrkk kind PersistentVolumeClaim apiVersion v1 type Warning reason ProvisioningFailed message no volume plugin matched name: kubernetes.io/no-provisioner
+new template:  Event occurred object <*> kind <*> apiVersion v1 type <*> reason <*> message <*> <*> <*> <*> <*> <*> 
+
+Processing line: 400, rate 1373.2 lines/sec, 117 clusters so far.
+content:  StatefulSet has been deleted volumemode-8932-8944/csi-hostpath-attacher
+old template:  StatefulSet has been deleted csi-mock-volumes-2753-2870/csi-mockplugin
+new template:  StatefulSet has been deleted <*> 
+
+Processing line: 600, rate 4943.0 lines/sec, 118 clusters so far.
+content:  Adding ReplicaSet replicaset-7308/test-rs
+old template:  Adding ReplicaSet replicaset-8143/condition-test
+new template:  Adding ReplicaSet <*> 
+
+content:  Controller still waiting on expectations &controller.ControlleeExpectations{add:2, del:0, key:"replicaset-7308/test-rs", timestamp:time.Time{wall:<HEX>, ext:360384856883, loc:(*time.Location)(<HEX>)}}
+old template:  Controller still waiting on expectations &controller.ControlleeExpectations{add:1 del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Controller still waiting on expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  Deleting ReplicaSet "replicaset-7308/test-rs"
+old template:  Deleting ReplicaSet replicaset-8143/condition-test
+new template:  Deleting ReplicaSet <*> 
+
+content:  ReplicaSet replicaset-7308/test-rs has been deleted
+old template:  ReplicaSet replicaset-8143/condition-test has been deleted
+new template:  ReplicaSet <*> has been deleted 
+
+content:  Adding ReplicationController services-1521/affinity-clusterip-timeout
+old template:  Adding ReplicationController kubectl-8297/agnhost-primary
+new template:  Adding ReplicationController <*> 
+
+content:  Deleting ReplicationController "services-1521/affinity-clusterip-timeout"
+old template:  Deleting ReplicationController kubectl-8297/agnhost-primary
+new template:  Deleting ReplicationController <*> 
+
+content:  ReplicationController services-1521/affinity-clusterip-timeout has been deleted
+old template:  ReplicationController kubectl-8297/agnhost-primary has been deleted
+new template:  ReplicationController <*> has been deleted 
+
+Processing line: 200, rate 3078.6 lines/sec, 120 clusters so far.
+content:  Setting expectations &controller.ControlleeExpectations{add:0, del:1, key:"deployment-9787/test-rolling-update-controller", timestamp:time.Time{wall:<HEX>, ext:826871823523, loc:(*time.Location)(<HEX>)}}
+old template:  Setting expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Setting expectations <*> <*> key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  "Event occurred" object="deployment-9787/test-rolling-update-deployment" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="ScalingReplicaSet" message="Scaled down replica set test-rolling-update-controller to 0"
+old template:  Event occurred object <*> kind StatefulSet apiVersion apps/v1 type Normal reason SuccessfulCreate message create Pod <*> in StatefulSet <*> successful
+new template:  Event occurred object <*> kind <*> apiVersion apps/v1 type Normal reason <*> message <*> <*> <*> <*> <*> <*> <*> 
+
+content:  Controller deployment-9787/test-rolling-update-controller received delete for pod deployment-9787/test-rolling-update-controller-bvm47
+old template:  Controller deployment-9787/test-rolling-update-controller waiting on deletions for: deployment-9787/test-rolling-update-controller-bvm47
+new template:  Controller deployment-9787/test-rolling-update-controller <*> <*> <*> <*> deployment-9787/test-rolling-update-controller-bvm47 
+
+content:  "Event occurred" object="deployment-9787/test-rolling-update-controller" kind="ReplicaSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulDelete" message="Deleted pod: test-rolling-update-controller-bvm47"
+old template:  Event occurred object <*> kind <*> apiVersion <*> type Normal reason SuccessfulCreate message Created pod: <*>
+new template:  Event occurred object <*> kind <*> apiVersion <*> type Normal reason <*> message <*> pod: <*> 
+
+content:  Error syncing endpoint slices for service "services-5529/endpoint-test2", retrying. Error: EndpointSlice informer cache is out of date
+old template:  Error syncing endpoint slices for service services-1521/affinity-clusterip-timeout retrying. Error: EndpointSlice informer cache is out of date
+new template:  Error syncing endpoint slices for service <*> retrying. Error: EndpointSlice informer cache is out of date 
+
+content:  updating PersistentVolumeClaim[pvc-protection-6568/pvc-protection7bwg8] status: phase Pending already set
+old template:  updating PersistentVolumeClaim <*> status: phase Bound already set
+new template:  updating PersistentVolumeClaim <*> status: phase <*> already set 
+
+content:  updating PersistentVolumeClaim[pvc-protection-6568/pvc-protection7bwg8]: binding to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim pvc-protection-6568/pvc-protection7bwg8 status: set phase Pending
+new template:  updating PersistentVolumeClaim pvc-protection-6568/pvc-protection7bwg8 <*> <*> <*> <*> 
+
+content:  "Pod uses PVC" pod="pvc-protection-6568/pvc-tester-7hfx4" PVC="pvc-protection-6568/pvc-protection7bwg8"
+old template:  Pod uses PVC pod persistent-local-volumes-test-7819/pod-<UID> PVC persistent-local-volumes-test-7819/pvc-7wrkk
+new template:  Pod uses PVC pod <*> PVC <*> 
+
+content:  "Keeping PVC because it is being used" PVC="pvc-protection-6568/pvc-protection7bwg8"
+old template:  Keeping PVC because it is being used PVC persistent-local-volumes-test-7819/pvc-7wrkk
+new template:  Keeping PVC because it is being used PVC <*> 
+
+Processing line: 200, rate 2068.7 lines/sec, 131 clusters so far.
+content:  Waited for 232.790931ms due to client-side throttling, not priority and fairness, request: POST:https://<IP>:6443/api/v1/namespaces/networkpolicies-2435/secrets
+old template:  Waited for 249.94768ms due to client-side throttling not priority and fairness request: GET:https://<IP>:6443/api/v1/namespaces/networkpolicies-2435/serviceaccounts/default
+new template:  Waited for <*> due to client-side throttling not priority and fairness request: <*> 
+
+content:  error finding provisioning plugin for claim persistent-local-volumes-test-2132/pvc-nltmw: no volume plugin matched name: kubernetes.io/no-provisioner
+old template:  error finding provisioning plugin for claim persistent-local-volumes-test-7819/pvc-7wrkk: no volume plugin matched name: kubernetes.io/no-provisioner
+new template:  error finding provisioning plugin for claim <*> no volume plugin matched name: kubernetes.io/no-provisioner 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-2132/pvc-nltmw]: bound to "local-pv9rkz8"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-2132/pvc-nltmw : binding to local-pv9rkz8
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-2132/pvc-nltmw : <*> to local-pv9rkz8 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-2132/pvc-nltmw] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-2132/pvc-nltmw : <*> to local-pv9rkz8
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-2132/pvc-nltmw <*> <*> <*> <*> 
+
+content:  Content remaining in namespace persistent-local-volumes-test-2132, waiting 8 seconds
+old template:  Content remaining in namespace <*> waiting 16 seconds
+new template:  Content remaining in namespace <*> waiting <*> seconds 
+
+content:  "Adding deployment" deployment="deployment-7474/test-new-deployment"
+old template:  Adding deployment deployment deployment-9787/test-rolling-update-deployment
+new template:  Adding deployment deployment <*> 
+
+content:  "Updating deployment" deployment="deployment-7474/test-new-deployment"
+old template:  Updating deployment deployment deployment-9787/test-rolling-update-deployment
+new template:  Updating deployment deployment <*> 
+
+content:  "Error syncing deployment" deployment="deployment-7474/test-new-deployment" err="Operation cannot be fulfilled on deployments.apps \"test-new-deployment\": the object has been modified; please apply your changes to the latest version and try again"
+old template:  Error syncing deployment deployment deployment-9787/test-rolling-update-deployment err Operation cannot be fulfilled on deployments.apps \ test-rolling-update-deployment\ : the object has been modified; please apply your changes to the latest version and try again
+new template:  Error syncing deployment deployment <*> err Operation cannot be fulfilled on deployments.apps \ <*> : the object has been modified; please apply your changes to the latest version and try again 
+
+content:  "Deleting deployment" deployment="deployment-7474/test-new-deployment"
+old template:  Deleting deployment deployment deployment-9787/test-rolling-update-deployment
+new template:  Deleting deployment deployment <*> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-1311/pvc-lczhh]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim csi-mock-volumes-1311/pvc-lczhh : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-1311/pvc-lczhh : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-1311/pvc-lczhh] status: set phase Bound
+old template:  updating PersistentVolumeClaim csi-mock-volumes-1311/pvc-lczhh : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-1311/pvc-lczhh <*> <*> <*> <*> 
+
+content:  attacherDetacher.AttachVolume started for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4") from node "kind-worker"
+old template:  attacherDetacher.AttachVolume started for volume pvc-<UID> (UniqueName: kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> ) from node kind-worker
+new template:  attacherDetacher.AttachVolume started for volume pvc-<UID> (UniqueName: <*> ) from node kind-worker 
+
+content:  AttachVolume.Attach succeeded for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4") from node "kind-worker"
+old template:  AttachVolume.Attach succeeded for volume pvc-<UID> (UniqueName: kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> ) from node kind-worker
+new template:  AttachVolume.Attach succeeded for volume pvc-<UID> (UniqueName: <*> ) from node kind-worker 
+
+content:  Report volume "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4" as attached to node "kind-worker"
+old template:  Report volume kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> as attached to node kind-worker
+new template:  Report volume <*> as attached to node kind-worker 
+
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-provisioning-8748^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4\"}]}}" for node "kind-worker" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-hostpath-provisioning-8748^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4 }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-mock-csi-mock-volumes-8321^4\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID>\ } }} for node kind-worker succeeded. VolumesAttached: {kubernetes.io/csi/csi-mock-csi-mock-volumes-8321^4 } {kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker succeeded. VolumesAttached: <*> } <*> } 
+
+content:  SetVolumeMountedByNode volume kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4 to the node "kind-worker" mounted false
+old template:  SetVolumeMountedByNode volume kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> to the node kind-worker mounted false
+new template:  SetVolumeMountedByNode volume <*> to the node kind-worker mounted false 
+
+content:  SetVolumeMountedByNode volume kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4 to the node "kind-worker" mounted true
+old template:  SetVolumeMountedByNode volume <*> to the node kind-worker mounted false
+new template:  SetVolumeMountedByNode volume <*> to the node kind-worker mounted <*> 
+
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4\"}]}}" for node "kind-worker" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4 }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID>\ } }} for node kind-worker succeeded. VolumesAttached: {kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker succeeded. VolumesAttached: <*> } 
+
+content:  Set detach request time to current time for volume kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4 on node "kind-worker"
+old template:  Set detach request time to current time for volume kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> on node kind-worker
+new template:  Set detach request time to current time for volume <*> on node kind-worker 
+
+content:  attacherDetacher.DetachVolume started for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4") on node "kind-worker"
+old template:  attacherDetacher.DetachVolume started for volume pvc-<UID> (UniqueName: kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> ) on node kind-worker
+new template:  attacherDetacher.DetachVolume started for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker 
+
+content:  Verified volume is safe to detach for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4") on node "kind-worker"
+old template:  Verified volume is safe to detach for volume pvc-<UID> (UniqueName: kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> ) on node kind-worker
+new template:  Verified volume is safe to detach for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker 
+
+Processing line: 200, rate 944.8 lines/sec, 136 clusters so far.
+content:  DetachVolume.Detach succeeded for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-1311^4") on node "kind-worker"
+old template:  DetachVolume.Detach succeeded for volume pvc-<UID> (UniqueName: kubernetes.io/csi/csi-hostpath-volumemode-8932^<UID> ) on node kind-worker
+new template:  DetachVolume.Detach succeeded for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker 
+
+content:  namespace controller - deleteAllContent - namespace: projected-112, estimate: 0, errors: unexpected items still remain in namespace: projected-112 for gvr: /v1, Resource=pods
+old template:  namespace controller - deleteAllContent - namespace: nettest-8008 estimate: 0 errors: unexpected items still remain in namespace: nettest-8008 for gvr: /v1 Resource pods
+new template:  namespace controller - deleteAllContent - namespace: <*> estimate: 0 errors: unexpected items still remain in namespace: <*> for gvr: /v1 Resource pods 
+
+content:  deletion of namespace projected-112 failed: unexpected items still remain in namespace: projected-112 for gvr: /v1, Resource=pods
+old template:  deletion of namespace nettest-8008 failed: unexpected items still remain in namespace: nettest-8008 for gvr: /v1 Resource pods
+new template:  deletion of namespace <*> failed: unexpected items still remain in namespace: <*> for gvr: /v1 Resource pods 
+
+content:  operation "provision-csi-mock-volumes-4458/pvc-dk6jm[<UID>]" is already running, skipping
+old template:  operation provision-volumemode-8932/csi-hostpathp78wp <UID> is already running skipping
+new template:  operation <*> <UID> is already running skipping 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-4458/pvc-dk6jm]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim csi-mock-volumes-4458/pvc-dk6jm : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-4458/pvc-dk6jm : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-4458/pvc-dk6jm] status: set phase Bound
+old template:  updating PersistentVolumeClaim csi-mock-volumes-4458/pvc-dk6jm : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-4458/pvc-dk6jm <*> <*> <*> <*> 
+
+content:  attacherDetacher.AttachVolume started for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4") from node "kind-worker2"
+old template:  attacherDetacher.AttachVolume started for volume pvc-<UID> (UniqueName: <*> ) from node kind-worker
+new template:  attacherDetacher.AttachVolume started for volume pvc-<UID> (UniqueName: <*> ) from node <*> 
+
+content:  AttachVolume.Attach succeeded for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4") from node "kind-worker2"
+old template:  AttachVolume.Attach succeeded for volume pvc-<UID> (UniqueName: <*> ) from node kind-worker
+new template:  AttachVolume.Attach succeeded for volume pvc-<UID> (UniqueName: <*> ) from node <*> 
+
+content:  Report volume "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4" as attached to node "kind-worker2"
+old template:  Report volume <*> as attached to node kind-worker
+new template:  Report volume <*> as attached to node <*> 
+
+content:  SetVolumeMountedByNode volume kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 to the node "kind-worker2" mounted false
+old template:  SetVolumeMountedByNode volume <*> to the node kind-worker mounted <*>
+new template:  SetVolumeMountedByNode volume <*> to the node <*> mounted <*> 
+
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-758^4\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4\"}]}}" for node "kind-worker2" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-mock-csi-mock-volumes-758^4 } {kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker succeeded. VolumesAttached: <*> } <*> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node <*> succeeded. VolumesAttached: <*> } <*> } 
+
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4\"}]}}" for node "kind-worker2" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker succeeded. VolumesAttached: <*> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node <*> succeeded. VolumesAttached: <*> } 
+
+Processing line: 200, rate 1011.7 lines/sec, 139 clusters so far.
+content:  Set detach request time to current time for volume kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 on node "kind-worker2"
+old template:  Set detach request time to current time for volume <*> on node kind-worker
+new template:  Set detach request time to current time for volume <*> on node <*> 
+
+content:  attacherDetacher.DetachVolume started for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4") on node "kind-worker2"
+old template:  attacherDetacher.DetachVolume started for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker
+new template:  attacherDetacher.DetachVolume started for volume pvc-<UID> (UniqueName: <*> ) on node <*> 
+
+content:  Verified volume is safe to detach for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4") on node "kind-worker2"
+old template:  Verified volume is safe to detach for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker
+new template:  Verified volume is safe to detach for volume pvc-<UID> (UniqueName: <*> ) on node <*> 
+
+content:  DetachVolume.Detach succeeded for volume "pvc-<UID>" (UniqueName: "kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4") on node "kind-worker2"
+old template:  DetachVolume.Detach succeeded for volume pvc-<UID> (UniqueName: <*> ) on node kind-worker
+new template:  DetachVolume.Detach succeeded for volume pvc-<UID> (UniqueName: <*> ) on node <*> 
+
+Processing line: 400, rate 2087.1 lines/sec, 140 clusters so far.
+Processing line: 200, rate 7314.5 lines/sec, 141 clusters so far.
+content:  "Cannot get replicaset for pod" ownerReference="rs" pod="disruption-4532/rs-vw87x" err="replicaset.apps \"rs\" not found"
+old template:  Cannot get replicaset for pod ownerReference rs pod disruption-4532/rs-5n86r err replicaset.apps \ rs\ not found
+new template:  Cannot get replicaset for pod ownerReference rs pod <*> err replicaset.apps \ rs\ not found 
+
+content:  updating PersistentVolumeClaim[volume-7190/pvc-z4cmh]: bound to "local-7wmbg"
+old template:  updating PersistentVolumeClaim volume-7190/pvc-z4cmh : binding to local-7wmbg
+new template:  updating PersistentVolumeClaim volume-7190/pvc-z4cmh : <*> to local-7wmbg 
+
+content:  updating PersistentVolumeClaim[volume-7190/pvc-z4cmh] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-7190/pvc-z4cmh : <*> to local-7wmbg
+new template:  updating PersistentVolumeClaim volume-7190/pvc-z4cmh <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[volume-3359/pvc-4f6ws]: bound to "local-9v5vq"
+old template:  updating PersistentVolumeClaim volume-3359/pvc-4f6ws : binding to local-9v5vq
+new template:  updating PersistentVolumeClaim volume-3359/pvc-4f6ws : <*> to local-9v5vq 
+
+content:  updating PersistentVolumeClaim[volume-3359/pvc-4f6ws] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-3359/pvc-4f6ws : <*> to local-9v5vq
+new template:  updating PersistentVolumeClaim volume-3359/pvc-4f6ws <*> <*> <*> <*> 
+
+Processing line: 200, rate 12910.5 lines/sec, 147 clusters so far.
+content:  updating PersistentVolumeClaim[provisioning-1492/pvc-xt598]: bound to "local-844dt"
+old template:  updating PersistentVolumeClaim provisioning-1492/pvc-xt598 : binding to local-844dt
+new template:  updating PersistentVolumeClaim provisioning-1492/pvc-xt598 : <*> to local-844dt 
+
+content:  updating PersistentVolumeClaim[provisioning-1492/pvc-xt598] status: set phase Bound
+old template:  updating PersistentVolumeClaim provisioning-1492/pvc-xt598 : <*> to local-844dt
+new template:  updating PersistentVolumeClaim provisioning-1492/pvc-xt598 <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[provisioning-1830/pvc-7568w]: bound to "local-8gfm8"
+old template:  updating PersistentVolumeClaim provisioning-1830/pvc-7568w : binding to local-8gfm8
+new template:  updating PersistentVolumeClaim provisioning-1830/pvc-7568w : <*> to local-8gfm8 
+
+content:  updating PersistentVolumeClaim[provisioning-1830/pvc-7568w] status: set phase Bound
+old template:  updating PersistentVolumeClaim provisioning-1830/pvc-7568w : <*> to local-8gfm8
+new template:  updating PersistentVolumeClaim provisioning-1830/pvc-7568w <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-7363/pvc-fh9q4]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim csi-mock-volumes-7363/pvc-fh9q4 : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-7363/pvc-fh9q4 : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-7363/pvc-fh9q4] status: set phase Bound
+old template:  updating PersistentVolumeClaim csi-mock-volumes-7363/pvc-fh9q4 : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-7363/pvc-fh9q4 <*> <*> <*> <*> 
+
+Processing line: 200, rate 3192.9 lines/sec, 151 clusters so far.
+content:  updating PersistentVolumeClaim[provisioning-8748/csi-hostpathstnbf]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim provisioning-8748/csi-hostpathstnbf : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim provisioning-8748/csi-hostpathstnbf : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[provisioning-8748/csi-hostpathstnbf] status: set phase Bound
+old template:  updating PersistentVolumeClaim provisioning-8748/csi-hostpathstnbf : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim provisioning-8748/csi-hostpathstnbf <*> <*> <*> <*> 
+
+Processing line: 200, rate 3183.5 lines/sec, 152 clusters so far.
+Processing line: 400, rate 14981.3 lines/sec, 152 clusters so far.
+Processing line: 600, rate 13778.0 lines/sec, 152 clusters so far.
+content:  "Event occurred" object="statefulset-9557/ss" kind="StatefulSet" apiVersion="apps/v1" type="Warning" reason="RecreatingFailedPod" message="StatefulSet statefulset-9557/ss is recreating failed Pod ss-0"
+old template:  Event occurred object <*> kind <*> apiVersion apps/v1 type Normal reason <*> message <*> <*> <*> <*> <*> <*> <*>
+new template:  Event occurred object <*> kind <*> apiVersion apps/v1 type <*> reason <*> message <*> <*> <*> <*> <*> <*> <*> 
+
+content:  StatefulSet statefulset-9557/ss pod status replicas=1 ready=1 current=0 updated=0
+old template:  StatefulSet <*> pod status replicas 1 ready <*> current 1 updated 1
+new template:  StatefulSet <*> pod status replicas 1 ready <*> current <*> updated <*> 
+
+content:  StatefulSet statefulset-9557/ss pod status replicas=0 ready=0 current=0 updated=0
+old template:  StatefulSet <*> pod status replicas 1 ready <*> current <*> updated <*>
+new template:  StatefulSet <*> pod status replicas <*> ready <*> current <*> updated <*> 
+
+Processing line: 200, rate 1396.5 lines/sec, 157 clusters so far.
+Processing line: 200, rate 9679.6 lines/sec, 157 clusters so far.
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-8714/pvc-tdx6k]: bound to "local-pv26dd6"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-8714/pvc-tdx6k : binding to local-pv26dd6
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-8714/pvc-tdx6k : <*> to local-pv26dd6 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-8714/pvc-tdx6k] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-8714/pvc-tdx6k : <*> to local-pv26dd6
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-8714/pvc-tdx6k <*> <*> <*> <*> 
+
+content:  error synchronizing serviceaccount persistent-local-volumes-test-8714/default: serviceaccounts "default" not found
+old template:  error synchronizing serviceaccount replicaset-7308/default: serviceaccounts default not found
+new template:  error synchronizing serviceaccount <*> serviceaccounts default not found 
+
+content:  "ReplicaSet updated" replicaSet="apply-8977/deployment-shared-unset-55bfccbb6c"
+old template:  ReplicaSet updated replicaSet deployment-9787/test-rolling-update-controller
+new template:  ReplicaSet updated replicaSet <*> 
+
+content:  "Cannot get replicaset for pod" ownerReference="deployment-shared-unset-55bfccbb6c" pod="apply-8977/deployment-shared-unset-55bfccbb6c-9tx6l" err="replicaset.apps \"deployment-shared-unset-55bfccbb6c\" not found"
+old template:  Cannot get replicaset for pod ownerReference rs pod <*> err replicaset.apps \ rs\ not found
+new template:  Cannot get replicaset for pod ownerReference <*> pod <*> err replicaset.apps \ <*> not found 
+
+content:  PodDisruptionBudget "disruption-6148/foo" has been deleted
+old template:  PodDisruptionBudget disruption-4532/foo has been deleted
+new template:  PodDisruptionBudget <*> has been deleted 
+
+content:  "Deleting pod" controller="exceed-active-deadline" pod="job-6441/exceed-active-deadline-wdxnn"
+old template:  Deleting pod controller test-rolling-update-controller pod deployment-9787/test-rolling-update-controller-bvm47
+new template:  Deleting pod controller <*> pod <*> 
+
+content:  Lowered expectations &controller.ControlleeExpectations{add:0, del:-1, key:"job-6441/exceed-active-deadline", timestamp:time.Time{wall:<HEX>, ext:647307884944, loc:(*time.Location)(<HEX>)}}
+old template:  Lowered expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Lowered expectations <*> <*> key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  "Event occurred" object="job-6441/exceed-active-deadline" kind="Job" apiVersion="batch/v1" type="Warning" reason="DeadlineExceeded" message="Job was active longer than specified deadline"
+old template:  Event occurred object <*> kind <*> apiVersion apps/v1 type <*> reason <*> message <*> <*> <*> <*> <*> <*> <*>
+new template:  Event occurred object <*> kind <*> apiVersion <*> type <*> reason <*> message <*> <*> <*> <*> <*> <*> <*> 
+
+content:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0, del:-2, key:"job-6441/exceed-active-deadline", timestamp:time.Time{wall:<HEX>, ext:647307884944, loc:(*time.Location)(<HEX>)}}
+old template:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0 del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Controller expectations fulfilled &controller.ControlleeExpectations{add:0 <*> key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-199/pvc-h42bg]: bound to "local-pv927gl"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-199/pvc-h42bg : binding to local-pv927gl
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-199/pvc-h42bg : <*> to local-pv927gl 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-199/pvc-h42bg] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-199/pvc-h42bg : <*> to local-pv927gl
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-199/pvc-h42bg <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[volume-7282/pvc-b9bjc]: bound to "local-99jkz"
+old template:  updating PersistentVolumeClaim volume-7282/pvc-b9bjc : binding to local-99jkz
+new template:  updating PersistentVolumeClaim volume-7282/pvc-b9bjc : <*> to local-99jkz 
+
+content:  updating PersistentVolumeClaim[volume-7282/pvc-b9bjc] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-7282/pvc-b9bjc : <*> to local-99jkz
+new template:  updating PersistentVolumeClaim volume-7282/pvc-b9bjc <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[volume-1378/pvc-4s5hq]: bound to "local-4bg9l"
+old template:  updating PersistentVolumeClaim volume-1378/pvc-4s5hq : binding to local-4bg9l
+new template:  updating PersistentVolumeClaim volume-1378/pvc-4s5hq : <*> to local-4bg9l 
+
+content:  updating PersistentVolumeClaim[volume-1378/pvc-4s5hq] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-1378/pvc-4s5hq : <*> to local-4bg9l
+new template:  updating PersistentVolumeClaim volume-1378/pvc-4s5hq <*> <*> <*> <*> 
+
+Processing line: 200, rate 3096.9 lines/sec, 169 clusters so far.
+content:  StatefulSet statefulset-8611/ss terminating Pod ss-1 for scale down
+old template:  StatefulSet statefulset-9557/ss terminating Pod ss-0 for scale down
+new template:  StatefulSet <*> terminating Pod <*> for scale down 
+
+content:  StatefulSet statefulset-8611/ss is waiting for Pod ss-1 to Terminate prior to scale down
+old template:  StatefulSet statefulset-9557/ss is waiting for Pod ss-0 to Terminate prior to scale down
+new template:  StatefulSet <*> is waiting for Pod <*> to Terminate prior to scale down 
+
+content:  Pod statefulset-8611/ss-1 deleted through k8s.io/kubernetes/vendor/k8s.io/client-go/tools/cache.ResourceEventHandlerFuncs.OnDelete.
+old template:  Pod statefulset-9557/ss-0 deleted through k8s.io/kubernetes/vendor/k8s.io/client-go/tools/cache.ResourceEventHandlerFuncs.OnDelete.
+new template:  Pod <*> deleted through k8s.io/kubernetes/vendor/k8s.io/client-go/tools/cache.ResourceEventHandlerFuncs.OnDelete. 
+
+Processing line: 200, rate 3033.2 lines/sec, 169 clusters so far.
+Processing line: 200, rate 4136.0 lines/sec, 171 clusters so far.
+content:  updating PersistentVolumeClaim[csi-mock-volumes-8946/pvc-58qjn]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim csi-mock-volumes-8946/pvc-58qjn : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-8946/pvc-58qjn : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[csi-mock-volumes-8946/pvc-58qjn] status: set phase Bound
+old template:  updating PersistentVolumeClaim csi-mock-volumes-8946/pvc-58qjn : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim csi-mock-volumes-8946/pvc-58qjn <*> <*> <*> <*> 
+
+Processing line: 200, rate 2322.6 lines/sec, 173 clusters so far.
+Processing line: 200, rate 15305.7 lines/sec, 173 clusters so far.
+content:  patching pod replicaset-4405_pod-adoption-release to remove its controllerRef to apps/v1/ReplicaSet:pod-adoption-release
+old template:  patching pod replication-controller-5056_pod-release-llfk4 to remove its controllerRef to v1/ReplicationController:pod-release
+new template:  patching pod <*> to remove its controllerRef to <*> 
+
+content:  object [apps/v1/ReplicaSet, namespace: replicaset-4405, name: pod-adoption-release, uid: <UID>]'s doesn't have an owner, continue on next item
+old template:  object v1/ReplicationController namespace: replication-controller-5056 name: pod-release uid: <UID> 's doesn't have an owner continue on next item
+new template:  object <*> namespace: <*> name: <*> uid: <UID> 's doesn't have an owner continue on next item 
+
+content:  updating PersistentVolumeClaim[volume-3678/pvc-q924l] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-3678/pvc-q924l : binding to local-bb7kf
+new template:  updating PersistentVolumeClaim volume-3678/pvc-q924l <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[volume-2305/pvc-sw9qh]: bound to "local-vqnn6"
+old template:  updating PersistentVolumeClaim volume-2305/pvc-sw9qh : binding to local-vqnn6
+new template:  updating PersistentVolumeClaim volume-2305/pvc-sw9qh : <*> to local-vqnn6 
+
+content:  updating PersistentVolumeClaim[volume-2305/pvc-sw9qh] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-2305/pvc-sw9qh : <*> to local-vqnn6
+new template:  updating PersistentVolumeClaim volume-2305/pvc-sw9qh <*> <*> <*> <*> 
+
+content:  "Too many replicas" replicaSet="services-8113/slow-terminating-unready-pod" need=0 deleting=1
+old template:  Too many replicas replicaSet deployment-9787/test-rolling-update-controller need 0 deleting 1
+new template:  Too many replicas replicaSet <*> need 0 deleting 1 
+
+content:  Controller services-8113/slow-terminating-unready-pod received delete for pod services-8113/slow-terminating-unready-pod-h2kvq
+old template:  Controller services-8113/slow-terminating-unready-pod waiting on deletions for: services-8113/slow-terminating-unready-pod-h2kvq
+new template:  Controller services-8113/slow-terminating-unready-pod <*> <*> <*> <*> services-8113/slow-terminating-unready-pod-h2kvq 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-130/pvc-tc222]: bound to "local-pvms87b"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-130/pvc-tc222 : binding to local-pvms87b
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-130/pvc-tc222 : <*> to local-pvms87b 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-130/pvc-tc222] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-130/pvc-tc222 : <*> to local-pvms87b
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-130/pvc-tc222 <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[volume-7489/csi-hostpathqhcrr]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim volume-7489/csi-hostpathqhcrr : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim volume-7489/csi-hostpathqhcrr : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[volume-7489/csi-hostpathqhcrr] status: set phase Bound
+old template:  updating PersistentVolumeClaim volume-7489/csi-hostpathqhcrr : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim volume-7489/csi-hostpathqhcrr <*> <*> <*> <*> 
+
+Processing line: 200, rate 2821.3 lines/sec, 180 clusters so far.
+Processing line: 400, rate 14368.2 lines/sec, 180 clusters so far.
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-8543/pvc-829gl]: bound to "local-pvm2qtx"
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-8543/pvc-829gl : binding to local-pvm2qtx
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-8543/pvc-829gl : <*> to local-pvm2qtx 
+
+content:  updating PersistentVolumeClaim[persistent-local-volumes-test-8543/pvc-829gl] status: set phase Bound
+old template:  updating PersistentVolumeClaim persistent-local-volumes-test-8543/pvc-829gl : <*> to local-pvm2qtx
+new template:  updating PersistentVolumeClaim persistent-local-volumes-test-8543/pvc-829gl <*> <*> <*> <*> 
+
+content:  StatefulSet statefulset-5154/ss has 3 unhealthy Pods starting with ss-0
+old template:  StatefulSet <*> has 1 unhealthy Pods starting with <*>
+new template:  StatefulSet <*> has <*> unhealthy Pods starting with <*> 
+
+content:  "Event occurred" object="statefulset-5154/ss" kind="StatefulSet" apiVersion="apps/v1" type="Normal" reason="SuccessfulCreate" message="create Claim datadir-ss-0 Pod ss-0 in StatefulSet ss success"
+old template:  Event occurred object pvc-protection-6568/pvc-protection7bwg8 kind PersistentVolumeClaim apiVersion v1 type Normal reason WaitForFirstConsumer message waiting for first consumer to be created before binding
+new template:  Event occurred object <*> kind <*> apiVersion <*> type Normal reason <*> message <*> <*> <*> <*> <*> <*> <*> <*> <*> 
+
+content:  updating PersistentVolumeClaim[statefulset-5154/datadir-ss-0]: binding to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-0 status: set phase Pending
+new template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-0 <*> <*> <*> <*> 
+
+content:  Update endpoints for statefulset-5154/test, ready: 0 not ready: 1
+old template:  Update endpoints for <*> ready: <*> not ready: 0
+new template:  Update endpoints for <*> ready: <*> not ready: <*> 
+
+Processing line: 200, rate 1665.5 lines/sec, 183 clusters so far.
+content:  updating PersistentVolumeClaim[statefulset-5154/datadir-ss-0] status: set phase Bound
+old template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-1 status: set phase Pending
+new template:  updating PersistentVolumeClaim <*> status: set phase <*> 
+
+content:  updating PersistentVolumeClaim[statefulset-5154/datadir-ss-1]: bound to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-1 : binding to pvc-<UID>
+new template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-1 : <*> to pvc-<UID> 
+
+content:  updating PersistentVolumeClaim[statefulset-5154/datadir-ss-0]: binding to "pvc-<UID>"
+old template:  updating PersistentVolumeClaim statefulset-5154/datadir-ss-1 : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim <*> : <*> to pvc-<UID> 
+
+Processing line: 400, rate 2213.1 lines/sec, 184 clusters so far.
+Processing line: 600, rate 15192.9 lines/sec, 184 clusters so far.
+Processing line: 800, rate 18477.5 lines/sec, 184 clusters so far.
+Processing line: 1000, rate 18036.1 lines/sec, 184 clusters so far.
+Processing line: 1200, rate 15450.1 lines/sec, 184 clusters so far.
+Processing line: 1400, rate 16267.7 lines/sec, 184 clusters so far.
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-3389^4\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-provisioning-6539^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID>\"}]}}" for node "kind-worker2" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-mock-csi-mock-volumes-3389^4 } {kubernetes.io/csi/csi-hostpath-provisioning-6539^<UID> } {kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID> }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4\ } }} for node kind-worker2 succeeded. VolumesAttached: {kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4 } {kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker2 succeeded. VolumesAttached: <*> } <*> } <*> } 
+
+Processing line: 200, rate 5573.4 lines/sec, 184 clusters so far.
+Processing line: 400, rate 12096.4 lines/sec, 184 clusters so far.
+Processing line: 200, rate 14056.7 lines/sec, 185 clusters so far.
+Processing line: 200, rate 10751.6 lines/sec, 185 clusters so far.
+Processing line: 400, rate 9806.8 lines/sec, 185 clusters so far.
+content:  "ReplicaSet added" replicaSet="apply-6861/deployment-shared-map-item-removal-55649fd747"
+old template:  ReplicaSet added replicaSet apply-8977/deployment-shared-unset-55bfccbb6c
+new template:  ReplicaSet added replicaSet <*> 
+
+Processing line: 200, rate 18632.2 lines/sec, 186 clusters so far.
+content:  add [v1/Pod, namespace: ephemeral-9146, name: inline-volume-tester-4sfx8, uid: <UID>] to the attemptToDelete, because it's waiting for its dependents to be deleted
+old template:  add v1/Pod namespace: csi-mock-volumes-9894 name: inline-volume-qbr9q uid: <UID> to the attemptToDelete because it's waiting for its dependents to be deleted
+new template:  add v1/Pod namespace: <*> name: <*> uid: <UID> to the attemptToDelete because it's waiting for its dependents to be deleted 
+
+content:  remove DeleteDependents finalizer for item [v1/Pod, namespace: ephemeral-9146, name: inline-volume-tester-4sfx8, uid: <UID>]
+old template:  remove DeleteDependents finalizer for item v1/Pod namespace: csi-mock-volumes-9894 name: inline-volume-qbr9q uid: <UID>
+new template:  remove DeleteDependents finalizer for item v1/Pod namespace: <*> name: <*> uid: <UID> 
+
+Processing line: 400, rate 3996.4 lines/sec, 186 clusters so far.
+content:  updating PersistentVolumeClaim[provisioning-8355/pvc-89tzg]: binding to "local-qgfvt"
+old template:  updating PersistentVolumeClaim <*> : <*> to pvc-<UID>
+new template:  updating PersistentVolumeClaim <*> : <*> to <*> 
+
+Processing line: 200, rate 2841.3 lines/sec, 189 clusters so far.
+content:  adding [v1/PersistentVolumeClaim, namespace: ephemeral-1712, name: inline-volume-tester2-sxjr7-my-volume-0, uid: <UID>] to attemptToDelete, because its owner [v1/Pod, namespace: ephemeral-1712, name: inline-volume-tester2-sxjr7, uid: <UID>] is deletingDependents
+old template:  adding v1/PersistentVolumeClaim namespace: ephemeral-1712 name: inline-volume-xszw6-my-volume uid: <UID> to attemptToDelete because its owner v1/Pod namespace: ephemeral-1712 name: inline-volume-xszw6 uid: <UID> is deletingDependents
+new template:  adding v1/PersistentVolumeClaim namespace: ephemeral-1712 name: <*> uid: <UID> to attemptToDelete because its owner v1/Pod namespace: ephemeral-1712 name: <*> uid: <UID> is deletingDependents 
+
+Processing line: 400, rate 2789.7 lines/sec, 191 clusters so far.
+Processing line: 600, rate 14324.6 lines/sec, 191 clusters so far.
+content:  "Error syncing deployment" deployment="apply-9626/deployment" err="Operation cannot be fulfilled on deployments.apps \"deployment\": StorageError: invalid object, Code: 4, Key: /registry/deployments/apply-9626/deployment, ResourceVersion: 0, AdditionalErrorMsg: Precondition failed: UID in precondition: <UID>, UID in object meta: "
+old template:  Error syncing deployment deployment apply-8977/deployment-shared-unset err Operation cannot be fulfilled on deployments.apps \ deployment-shared-unset\ : StorageError: invalid object Code: 4 Key: /registry/deployments/apply-8977/deployment-shared-unset ResourceVersion: 0 AdditionalErrorMsg: Precondition failed: UID in precondition: <UID> UID in object meta:
+new template:  Error syncing deployment deployment <*> err Operation cannot be fulfilled on deployments.apps \ <*> : StorageError: invalid object Code: 4 Key: <*> ResourceVersion: 0 AdditionalErrorMsg: Precondition failed: UID in precondition: <UID> UID in object meta: 
+
+Processing line: 200, rate 2660.7 lines/sec, 194 clusters so far.
+Processing line: 400, rate 15961.9 lines/sec, 194 clusters so far.
+content:  Adding job job-5623/backofflimit
+old template:  Adding job job-6441/exceed-active-deadline
+new template:  Adding job <*> 
+
+content:  Too few pods running job "job-5623/backofflimit", need 1, creating 1
+old template:  Too few pods running job job-6441/exceed-active-deadline need 2 creating 2
+new template:  Too few pods running job <*> need <*> creating <*> 
+
+content:  Updating job job-5623/backofflimit
+old template:  Updating job job-6441/exceed-active-deadline
+new template:  Updating job <*> 
+
+content:  Ignoring inactive pod job-5623/backofflimit-h6m4j in state Failed, deletion time <nil>
+old template:  Ignoring inactive pod job-5623/backofflimit-fkk84 in state Failed deletion time <nil>
+new template:  Ignoring inactive pod <*> in state Failed deletion time <nil> 
+
+content:  Job has been deleted: job-5623/backofflimit
+old template:  Job has been deleted: job-6441/exceed-active-deadline
+new template:  Job has been deleted: <*> 
+
+Processing line: 200, rate 13239.8 lines/sec, 196 clusters so far.
+content:  "Event occurred" object="replication-controller-886/condition-test" kind="ReplicationController" apiVersion="v1" type="Warning" reason="FailedCreate" message="Error creating: pods \"condition-test-5scjr\" is forbidden: exceeded quota: condition-test, requested: pods=1, used: pods=2, limited: pods=2"
+old template:  Event occurred object replicaset-8143/condition-test kind ReplicaSet apiVersion apps/v1 type Warning reason FailedCreate message Error creating: pods \ <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2
+new template:  Event occurred object <*> kind <*> apiVersion <*> type Warning reason FailedCreate message Error creating: pods \ <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2 
+
+content:  Slow-start failure. Skipping creation of 1 pods, decrementing expectations for ReplicationController replication-controller-886/condition-test
+old template:  Slow-start failure. Skipping creation of 1 pods decrementing expectations for ReplicaSet replicaset-8143/condition-test
+new template:  Slow-start failure. Skipping creation of 1 pods decrementing expectations for <*> <*> 
+
+content:  sync "replication-controller-886/condition-test" failed with pods "condition-test-5scjr" is forbidden: exceeded quota: condition-test, requested: pods=1, used: pods=2, limited: pods=2
+old template:  sync replicaset-8143/condition-test failed with pods <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2
+new template:  sync <*> failed with pods <*> is forbidden: exceeded quota: condition-test requested: pods 1 used: pods 2 limited: pods 2 
+
+content:  addPod called on pod "hostpath-symlink-prep-provisioning-7127"
+old template:  addPod called on pod hostpath-symlink-prep-provisioning-9680
+new template:  addPod called on pod <*> 
+
+content:  No PodDisruptionBudgets found for pod hostpath-symlink-prep-provisioning-7127, PodDisruptionBudget controller will avoid syncing.
+old template:  No PodDisruptionBudgets found for pod hostpath-symlink-prep-provisioning-9680 PodDisruptionBudget controller will avoid syncing.
+new template:  No PodDisruptionBudgets found for pod <*> PodDisruptionBudget controller will avoid syncing. 
+
+content:  No matching pdb for pod "hostpath-symlink-prep-provisioning-7127"
+old template:  No matching pdb for pod hostpath-symlink-prep-provisioning-9680
+new template:  No matching pdb for pod <*> 
+
+content:  updatePod called on pod "hostpath-symlink-prep-provisioning-7127"
+old template:  updatePod called on pod hostpath-symlink-prep-provisioning-9680
+new template:  updatePod called on pod <*> 
+
+content:  deletePod called on pod "hostpath-symlink-prep-provisioning-7127"
+old template:  deletePod called on pod hostpath-symlink-prep-provisioning-9680
+new template:  deletePod called on pod <*> 
+
+Processing line: 200, rate 5627.1 lines/sec, 202 clusters so far.
+Processing line: 200, rate 17064.6 lines/sec, 202 clusters so far.
+Processing line: 400, rate 16143.1 lines/sec, 202 clusters so far.
+content:  add [v1/ReplicationController, namespace: gc-3131, name: simpletest.rc, uid: <UID>] to the attemptToDelete, because it's waiting for its dependents to be deleted
+old template:  add v1/Pod namespace: <*> name: <*> uid: <UID> to the attemptToDelete because it's waiting for its dependents to be deleted
+new template:  add <*> namespace: <*> name: <*> uid: <UID> to the attemptToDelete because it's waiting for its dependents to be deleted 
+
+content:  adding [v1/Pod, namespace: gc-3131, name: simpletest.rc-hmrnq, uid: <UID>] to attemptToDelete, because its owner [v1/ReplicationController, namespace: gc-3131, name: simpletest.rc, uid: <UID>] is deletingDependents
+old template:  adding v1/PersistentVolumeClaim namespace: ephemeral-1712 name: <*> uid: <UID> to attemptToDelete because its owner v1/Pod namespace: ephemeral-1712 name: <*> uid: <UID> is deletingDependents
+new template:  adding <*> namespace: <*> name: <*> uid: <UID> to attemptToDelete because its owner <*> namespace: <*> name: <*> uid: <UID> is deletingDependents 
+
+content:  remove DeleteDependents finalizer for item [v1/ReplicationController, namespace: gc-3131, name: simpletest.rc, uid: <UID>]
+old template:  remove DeleteDependents finalizer for item v1/Pod namespace: <*> name: <*> uid: <UID>
+new template:  remove DeleteDependents finalizer for item <*> namespace: <*> name: <*> uid: <UID> 
+
+Processing line: 200, rate 2473.8 lines/sec, 202 clusters so far.
+content:  storeObjectUpdate: ignoring claim "provisioning-5474/csi-hostpathbzqbk" version 32640
+old template:  storeObjectUpdate: ignoring claim csi-mock-volumes-8946/pvc-58qjn version 6605
+new template:  storeObjectUpdate: ignoring claim <*> version <*> 
+
+Processing line: 200, rate 5938.6 lines/sec, 202 clusters so far.
+Processing line: 400, rate 15110.5 lines/sec, 202 clusters so far.
+Processing line: 600, rate 13833.2 lines/sec, 202 clusters so far.
+content:  "PVC not found, ignoring" PVC="ephemeral-4117/inline-volume-zzbsp-my-volume"
+old template:  PVC not found ignoring PVC ephemeral-1712/inline-volume-xszw6-my-volume
+new template:  PVC not found ignoring PVC <*> 
+
+content:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion:"v1", Kind:"PersistentVolumeClaim", Name:"inline-volume-zzbsp-my-volume", UID:"<UID>", Controller:(*bool)(nil), BlockOwnerDeletion:(*bool)(nil)}, Namespace:"ephemeral-4117"}, dependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:1, readerWait:0}, dependents:map[*garbagecollector.node]struct {}{}, deletingDependents:false, deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, beingDeleted:true, beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, virtual:false, virtualLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, owners:[]v1.OwnerReference{v1.OwnerReference{APIVersion:"v1", Kind:"Pod", Name:"inline-volume-zzbsp", UID:"<UID>", Controller:(*bool)(<HEX>), BlockOwnerDeletion:(*bool)(<HEX>)}}}: persistentvolumeclaims "inline-volume-zzbsp-my-volume" not found
+old template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: v1 Kind: PersistentVolumeClaim Name: inline-volume-xszw6-my-volume UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: ephemeral-1712 } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} beingDeleted:true beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: Pod Name: inline-volume-xszw6 UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: persistentvolumeclaims inline-volume-xszw6-my-volume not found
+new template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: v1 Kind: PersistentVolumeClaim Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: <*> } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} beingDeleted:true beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: Pod Name: <*> UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: persistentvolumeclaims <*> not found 
+
+Processing line: 200, rate 3723.9 lines/sec, 202 clusters so far.
+Processing line: 400, rate 14970.8 lines/sec, 202 clusters so far.
+Processing line: 200, rate 15324.2 lines/sec, 202 clusters so far.
+content:  Ignoring the PVC "volume-expand-5207/csi-hostpaths6rtt" (uid: "<UID>") : didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC.
+old template:  Ignoring the PVC csi-mock-volumes-4458/pvc-dk6jm (uid: <UID> ) : didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC.
+new template:  Ignoring the PVC <*> (uid: <UID> ) : didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC. 
+
+content:  "Event occurred" object="volume-expand-5207/csi-hostpaths6rtt" kind="PersistentVolumeClaim" apiVersion="v1" type="Warning" reason="ExternalExpanding" message="Ignoring the PVC: didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC."
+old template:  Event occurred object csi-mock-volumes-4458/pvc-dk6jm kind PersistentVolumeClaim apiVersion v1 type Warning reason ExternalExpanding message Ignoring the PVC: didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC.
+new template:  Event occurred object <*> kind PersistentVolumeClaim apiVersion v1 type Warning reason ExternalExpanding message Ignoring the PVC: didn't find a plugin capable of expanding the volume; waiting for an external controller to process this PVC. 
+
+Processing line: 400, rate 3707.1 lines/sec, 202 clusters so far.
+content:  kubernetes.io/csi: VolumeAttachment object [csi-hostpath-volume-expand-5207^<UID>] for volume [csi-hostpath-volume-expand-5207^<UID>] not found, object deleted
+old template:  kubernetes.io/csi: VolumeAttachment object csi-hostpath-volume-expand-2991^<UID> for volume csi-hostpath-volume-expand-2991^<UID> not found object deleted
+new template:  kubernetes.io/csi: VolumeAttachment object <*> for volume <*> not found object deleted 
+
+Processing line: 600, rate 5836.5 lines/sec, 202 clusters so far.
+Processing line: 800, rate 12892.3 lines/sec, 202 clusters so far.
+Processing line: 200, rate 11909.0 lines/sec, 202 clusters so far.
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-volume-expand-5207^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID>\"}]}}" for node "kind-worker" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-hostpath-volume-expand-5207^<UID> } {kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID> } {kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID> }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker2 succeeded. VolumesAttached: <*> } <*> } <*> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node <*> succeeded. VolumesAttached: <*> } <*> } <*> } 
+
+Processing line: 400, rate 2817.9 lines/sec, 203 clusters so far.
+Processing line: 600, rate 10777.7 lines/sec, 203 clusters so far.
+Processing line: 200, rate 8726.9 lines/sec, 203 clusters so far.
+Processing line: 200, rate 10204.1 lines/sec, 203 clusters so far.
+Processing line: 400, rate 10759.0 lines/sec, 203 clusters so far.
+content:  services-9358/testservice Service not found, cleaning up any mirrored EndpointSlices
+old template:  services-8113/tolerate-unready Service not found cleaning up any mirrored EndpointSlices
+new template:  <*> Service not found cleaning up any mirrored EndpointSlices 
+
+Processing line: 200, rate 12895.0 lines/sec, 203 clusters so far.
+Processing line: 400, rate 11924.6 lines/sec, 203 clusters so far.
+Processing line: 200, rate 15003.8 lines/sec, 203 clusters so far.
+Processing line: 200, rate 12453.4 lines/sec, 203 clusters so far.
+Processing line: 400, rate 14087.6 lines/sec, 203 clusters so far.
+Processing line: 600, rate 13038.7 lines/sec, 203 clusters so far.
+Processing line: 800, rate 2952.2 lines/sec, 205 clusters so far.
+content:  "Error syncing endpoints, retrying" service="aggregator-3243/sample-api" err="Operation cannot be fulfilled on endpoints \"sample-api\": the object has been modified; please apply your changes to the latest version and try again"
+old template:  Error syncing endpoints retrying service statefulset-2151/test err Operation cannot be fulfilled on endpoints \ test\ : the object has been modified; please apply your changes to the latest version and try again
+new template:  Error syncing endpoints retrying service <*> err Operation cannot be fulfilled on endpoints \ <*> : the object has been modified; please apply your changes to the latest version and try again 
+
+content:  "Event occurred" object="aggregator-3243/sample-api" kind="Endpoints" apiVersion="v1" type="Warning" reason="FailedToUpdateEndpoint" message="Failed to update endpoint aggregator-3243/sample-api: Operation cannot be fulfilled on endpoints \"sample-api\": the object has been modified; please apply your changes to the latest version and try again"
+old template:  Event occurred object statefulset-2151/test kind Endpoints apiVersion v1 type Warning reason FailedToUpdateEndpoint message Failed to update endpoint statefulset-2151/test: Operation cannot be fulfilled on endpoints \ test\ : the object has been modified; please apply your changes to the latest version and try again
+new template:  Event occurred object <*> kind Endpoints apiVersion v1 type Warning reason FailedToUpdateEndpoint message Failed to update endpoint <*> Operation cannot be fulfilled on endpoints \ <*> : the object has been modified; please apply your changes to the latest version and try again 
+
+Processing line: 200, rate 13862.9 lines/sec, 205 clusters so far.
+Processing line: 200, rate 15150.4 lines/sec, 205 clusters so far.
+Processing line: 200, rate 13751.4 lines/sec, 205 clusters so far.
+Processing line: 400, rate 14842.4 lines/sec, 205 clusters so far.
+Processing line: 600, rate 12529.7 lines/sec, 205 clusters so far.
+Processing line: 200, rate 13971.5 lines/sec, 205 clusters so far.
+Processing line: 200, rate 12473.6 lines/sec, 205 clusters so far.
+content:  error syncing StatefulSet statefulset-3524/ss, requeuing: The POST operation against Pod could not be completed at this time, please try again.
+old template:  error syncing StatefulSet statefulset-9557/ss requeuing: The POST operation against Pod could not be completed at this time please try again.
+new template:  error syncing StatefulSet <*> requeuing: The POST operation against Pod could not be completed at this time please try again. 
+
+content:  "Event occurred" object="statefulset-3524/ss" kind="StatefulSet" apiVersion="apps/v1" type="Warning" reason="FailedCreate" message="create Pod ss-0 in StatefulSet ss failed error: The POST operation against Pod could not be completed at this time, please try again."
+old template:  Event occurred object statefulset-9557/ss kind StatefulSet apiVersion apps/v1 type Warning reason FailedCreate message create Pod ss-0 in StatefulSet ss failed error: The POST operation against Pod could not be completed at this time please try again.
+new template:  Event occurred object <*> kind StatefulSet apiVersion apps/v1 type Warning reason FailedCreate message create Pod ss-0 in StatefulSet ss failed error: The POST operation against Pod could not be completed at this time please try again. 
+
+Processing line: 200, rate 3347.8 lines/sec, 205 clusters so far.
+Processing line: 200, rate 14194.4 lines/sec, 205 clusters so far.
+Processing line: 400, rate 14160.4 lines/sec, 205 clusters so far.
+Processing line: 200, rate 14132.5 lines/sec, 205 clusters so far.
+Processing line: 400, rate 12733.7 lines/sec, 205 clusters so far.
+content:  Ignoring inactive pod job-3685/fail-once-non-local-z7rbb in state Succeeded, deletion time <nil>
+old template:  Ignoring inactive pod <*> in state Failed deletion time <nil>
+new template:  Ignoring inactive pod <*> in state <*> deletion time <nil> 
+
+content:  Error syncing job: failed pod(s) detected for job key "job-3685/fail-once-non-local"
+old template:  Error syncing job: failed pod(s) detected for job key job-5623/backofflimit
+new template:  Error syncing job: failed pod(s) detected for job key <*> 
+
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-provisioning-3234^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-8800^4\"}]}}" for node "kind-worker2" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4 } {kubernetes.io/csi/csi-hostpath-provisioning-3234^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-8800^4 }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-volume-expand-5207^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-provisioning-5594^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID>\ } }} for node kind-worker succeeded. VolumesAttached: {kubernetes.io/csi/csi-hostpath-volume-expand-5207^<UID> } {kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID> } {kubernetes.io/csi/csi-hostpath-provisioning-5594^<UID> } {kubernetes.io/csi/csi-hostpath-ephemeral-2480^<UID> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node <*> succeeded. VolumesAttached: <*> } <*> } <*> } <*> } 
+
+Processing line: 200, rate 4947.3 lines/sec, 206 clusters so far.
+Processing line: 400, rate 13291.6 lines/sec, 206 clusters so far.
+Processing line: 200, rate 16236.2 lines/sec, 206 clusters so far.
+Processing line: 400, rate 5466.4 lines/sec, 207 clusters so far.
+Processing line: 200, rate 14792.6 lines/sec, 207 clusters so far.
+Processing line: 200, rate 11718.6 lines/sec, 207 clusters so far.
+Processing line: 200, rate 12803.9 lines/sec, 207 clusters so far.
+Processing line: 400, rate 9558.5 lines/sec, 207 clusters so far.
+Processing line: 600, rate 12992.1 lines/sec, 207 clusters so far.
+content:  StatefulSet statefulset-9241/ss is waiting for Pod ss-0 to Terminate
+old template:  StatefulSet statefulset-2151/ss is waiting for Pod ss-0 to Terminate
+new template:  StatefulSet <*> is waiting for Pod ss-0 to Terminate 
+
+Processing line: 200, rate 3158.8 lines/sec, 208 clusters so far.
+Processing line: 400, rate 14946.3 lines/sec, 208 clusters so far.
+content:  StatefulSet statefulset-9241/ss terminating Pod ss-2 for update
+old template:  StatefulSet statefulset-9241/ss terminating Pod ss-0 for update
+new template:  StatefulSet statefulset-9241/ss terminating Pod <*> for update 
+
+content:  StatefulSet statefulset-9241/ss is waiting for Pod ss-2 to Terminate
+old template:  StatefulSet <*> is waiting for Pod ss-0 to Terminate
+new template:  StatefulSet <*> is waiting for Pod <*> to Terminate 
+
+Processing line: 600, rate 3476.3 lines/sec, 208 clusters so far.
+Processing line: 800, rate 15102.1 lines/sec, 208 clusters so far.
+Processing line: 1000, rate 17445.7 lines/sec, 208 clusters so far.
+Processing line: 1200, rate 19323.7 lines/sec, 208 clusters so far.
+Processing line: 1400, rate 14672.3 lines/sec, 208 clusters so far.
+Processing line: 200, rate 14411.4 lines/sec, 208 clusters so far.
+Processing line: 400, rate 14235.8 lines/sec, 208 clusters so far.
+Processing line: 600, rate 12342.0 lines/sec, 208 clusters so far.
+Processing line: 200, rate 13802.5 lines/sec, 208 clusters so far.
+Processing line: 200, rate 14124.1 lines/sec, 208 clusters so far.
+content:  StatefulSet statefulset-3662/ss2 terminating Pod ss2-2 for update
+old template:  StatefulSet statefulset-9241/ss terminating Pod <*> for update
+new template:  StatefulSet <*> terminating Pod <*> for update 
+
+Processing line: 200, rate 5030.9 lines/sec, 208 clusters so far.
+Processing line: 400, rate 15867.1 lines/sec, 208 clusters so far.
+Processing line: 600, rate 20177.5 lines/sec, 208 clusters so far.
+content:  "Event occurred" object="deployment-9869/webserver" kind="Deployment" apiVersion="apps/v1" type="Warning" reason="DeploymentRollbackRevisionNotFound" message="Unable to find last revision."
+old template:  Event occurred object <*> kind PersistentVolumeClaim apiVersion v1 type Warning reason ProvisioningFailed message storageclass.storage.k8s.io \ <*> not found
+new template:  Event occurred object <*> kind <*> apiVersion <*> type Warning reason <*> message <*> <*> <*> <*> <*> 
+
+content:  Found 0 available pods in old RS deployment-9869/webserver-847dcfb7fb
+old template:  Found 1 available pods in old RS deployment-9787/test-rolling-update-controller
+new template:  Found <*> available pods in old RS <*> 
+
+content:  "Too many replicas" replicaSet="deployment-9869/webserver-847dcfb7fb" need=5 deleting=1
+old template:  Too many replicas replicaSet <*> need 0 deleting 1
+new template:  Too many replicas replicaSet <*> need <*> deleting 1 
+
+content:  Controller deployment-9869/webserver-847dcfb7fb received delete for pod deployment-9869/webserver-847dcfb7fb-cbzmq
+old template:  Controller deployment-9869/webserver-847dcfb7fb waiting on deletions for: deployment-9869/webserver-847dcfb7fb-cbzmq
+new template:  Controller deployment-9869/webserver-847dcfb7fb <*> <*> <*> <*> deployment-9869/webserver-847dcfb7fb-cbzmq 
+
+content:  "Error syncing deployment" deployment="deployment-9869/webserver" err="Operation cannot be fulfilled on replicasets.apps \"webserver-6584b976d5\": the object has been modified; please apply your changes to the latest version and try again"
+old template:  Error syncing deployment deployment <*> err Operation cannot be fulfilled on deployments.apps \ <*> : the object has been modified; please apply your changes to the latest version and try again
+new template:  Error syncing deployment deployment <*> err Operation cannot be fulfilled on <*> \ <*> : the object has been modified; please apply your changes to the latest version and try again 
+
+Processing line: 200, rate 952.3 lines/sec, 212 clusters so far.
+content:  New replica set deployment-9869/webserver-789dfdff45 has 0 available pods.
+old template:  New replica set deployment-9869/webserver-6584b976d5 has 0 available pods.
+new template:  New replica set <*> has 0 available pods. 
+
+content:  "Too many replicas" replicaSet="deployment-9869/webserver-847dcfb7fb" need=3 deleting=3
+old template:  Too many replicas replicaSet <*> need <*> deleting 1
+new template:  Too many replicas replicaSet <*> need <*> deleting <*> 
+
+content:  Controller deployment-9869/webserver-847dcfb7fb received delete for pod deployment-9869/webserver-847dcfb7fb-m9mrs
+old template:  Controller deployment-9869/webserver-847dcfb7fb received delete for pod deployment-9869/webserver-847dcfb7fb-wtwtc
+new template:  Controller deployment-9869/webserver-847dcfb7fb received delete for pod <*> 
+
+content:  Found 9 related pods for ReplicaSet deployment-9869/webserver-847dcfb7fb: webserver-789dfdff45-kv4td, webserver-789dfdff45-sbhlz, webserver-789dfdff45-4bk74, webserver-847dcfb7fb-sffmh, webserver-847dcfb7fb-wtsgk, webserver-847dcfb7fb-g6b7w, webserver-6584b976d5-zx8sg, webserver-6584b976d5-cmtvv, webserver-6584b976d5-xkm5j
+old template:  Found 9 related pods for ReplicaSet deployment-9869/webserver-847dcfb7fb: webserver-847dcfb7fb-fd7nv webserver-847dcfb7fb-wtwtc webserver-847dcfb7fb-sffmh webserver-847dcfb7fb-m9mrs webserver-847dcfb7fb-wtsgk webserver-847dcfb7fb-g6b7w webserver-6584b976d5-cmtvv webserver-6584b976d5-zx8sg webserver-6584b976d5-xkm5j
+new template:  Found 9 related pods for ReplicaSet deployment-9869/webserver-847dcfb7fb: <*> <*> <*> <*> webserver-847dcfb7fb-wtsgk webserver-847dcfb7fb-g6b7w <*> <*> webserver-6584b976d5-xkm5j 
+
+content:  Controller deployment-9869/webserver-847dcfb7fb waiting on deletions for: [deployment-9869/webserver-847dcfb7fb-wtsgk deployment-9869/webserver-847dcfb7fb-g6b7w deployment-9869/webserver-847dcfb7fb-sffmh]
+old template:  Controller deployment-9869/webserver-847dcfb7fb waiting on deletions for: deployment-9869/webserver-847dcfb7fb-m9mrs deployment-9869/webserver-847dcfb7fb-fd7nv deployment-9869/webserver-847dcfb7fb-wtwtc
+new template:  Controller deployment-9869/webserver-847dcfb7fb waiting on deletions for: <*> <*> <*> 
+
+content:  "Found related ReplicaSets" replicaSet="deployment-9869/webserver-6584b976d5" relatedReplicaSets=[webserver-847dcfb7fb webserver-6584b976d5 webserver-789dfdff45 webserver-6dc485dd69]
+old template:  Found related ReplicaSets replicaSet deployment-9869/webserver-847dcfb7fb relatedReplicaSets webserver-789dfdff45 webserver-6dc485dd69 webserver-847dcfb7fb webserver-6584b976d5
+new template:  Found related ReplicaSets replicaSet <*> relatedReplicaSets <*> <*> <*> <*> 
+
+Processing line: 400, rate 655.4 lines/sec, 219 clusters so far.
+content:  Controller deployment-9869/webserver-6584b976d5 received delete for pod deployment-9869/webserver-6584b976d5-cmtvv
+old template:  Controller deployment-9869/webserver-847dcfb7fb received delete for pod <*>
+new template:  Controller <*> received delete for pod <*> 
+
+content:  "Event occurred" object="deployment-9869/webserver" kind="Deployment" apiVersion="apps/v1" type="Normal" reason="DeploymentRollback" message="Rolled back deployment \"webserver\" to revision 4"
+old template:  Event occurred object deployment-9869/webserver kind Deployment apiVersion apps/v1 type Normal reason DeploymentRollback message Rolled back deployment \ webserver\ to revision 3
+new template:  Event occurred object deployment-9869/webserver kind Deployment apiVersion apps/v1 type Normal reason DeploymentRollback message Rolled back deployment \ webserver\ to revision <*> 
+
+Processing line: 600, rate 2388.3 lines/sec, 220 clusters so far.
+content:  New replica set deployment-9869/webserver-6dc485dd69 has 1 available pods.
+old template:  New replica set <*> has 0 available pods.
+new template:  New replica set <*> has <*> available pods. 
+
+content:  Controller deployment-9869/webserver-6584b976d5 waiting on deletions for: [deployment-9869/webserver-6584b976d5-xkm5j]
+old template:  Controller deployment-9869/webserver-6584b976d5 waiting on deletions for: deployment-9869/webserver-6584b976d5-cmtvv
+new template:  Controller deployment-9869/webserver-6584b976d5 waiting on deletions for: <*> 
+
+content:  Found 10 related pods for ReplicaSet deployment-9869/webserver-6584b976d5: webserver-6584b976d5-zx8sg, webserver-789dfdff45-sbhlz, webserver-789dfdff45-4bk74, webserver-789dfdff45-mdz7v, webserver-789dfdff45-kv4td, webserver-6dc485dd69-ljsrw, webserver-6dc485dd69-8csd9, webserver-6dc485dd69-crxz6, webserver-6dc485dd69-r8pjz, webserver-6dc485dd69-hx9kf
+old template:  Found 10 related pods for ReplicaSet deployment-9869/webserver-6584b976d5: webserver-6584b976d5-zx8sg webserver-6584b976d5-xkm5j webserver-789dfdff45-sbhlz webserver-789dfdff45-4bk74 webserver-789dfdff45-kv4td webserver-789dfdff45-mdz7v webserver-6dc485dd69-8csd9 webserver-6dc485dd69-r8pjz webserver-6dc485dd69-hx9kf webserver-6dc485dd69-ljsrw
+new template:  Found 10 related pods for ReplicaSet deployment-9869/webserver-6584b976d5: webserver-6584b976d5-zx8sg <*> <*> <*> webserver-789dfdff45-kv4td <*> webserver-6dc485dd69-8csd9 <*> <*> <*> 
+
+Processing line: 800, rate 1963.5 lines/sec, 221 clusters so far.
+Processing line: 1000, rate 13733.4 lines/sec, 221 clusters so far.
+Processing line: 1200, rate 14536.0 lines/sec, 221 clusters so far.
+Processing line: 1400, rate 2023.6 lines/sec, 224 clusters so far.
+content:  "Found related ReplicaSets" replicaSet="deployment-9869/webserver-6dc485dd69" relatedReplicaSets=[webserver-6584b976d5 webserver-789dfdff45 webserver-6dc485dd69 webserver-db49d755 webserver-847dcfb7fb]
+old template:  Found related ReplicaSets replicaSet deployment-9869/webserver-6dc485dd69 relatedReplicaSets webserver-847dcfb7fb webserver-6584b976d5 webserver-789dfdff45 webserver-6dc485dd69 webserver-db49d755
+new template:  Found related ReplicaSets replicaSet deployment-9869/webserver-6dc485dd69 relatedReplicaSets <*> <*> <*> <*> <*> 
+
+content:  Controller deployment-9869/webserver-6dc485dd69 waiting on deletions for: [deployment-9869/webserver-6dc485dd69-2s55n]
+old template:  Controller deployment-9869/webserver-6584b976d5 waiting on deletions for: <*>
+new template:  Controller <*> waiting on deletions for: <*> 
+
+Processing line: 1600, rate 2332.5 lines/sec, 225 clusters so far.
+content:  "Found related ReplicaSets" replicaSet="deployment-9869/webserver-db49d755" relatedReplicaSets=[webserver-db49d755 webserver-847dcfb7fb webserver-6584b976d5 webserver-789dfdff45 webserver-6dc485dd69]
+old template:  Found related ReplicaSets replicaSet deployment-9869/webserver-6dc485dd69 relatedReplicaSets <*> <*> <*> <*> <*>
+new template:  Found related ReplicaSets replicaSet <*> relatedReplicaSets <*> <*> <*> <*> <*> 
+
+content:  Found 12 related pods for ReplicaSet deployment-9869/webserver-789dfdff45: webserver-db49d755-npnh6, webserver-db49d755-jp87r, webserver-db49d755-sgfj4, webserver-db49d755-7lbjx, webserver-db49d755-qmztx, webserver-db49d755-n8tkc, webserver-db49d755-nj9xz, webserver-789dfdff45-cp5sq, webserver-789dfdff45-t8t8v, webserver-789dfdff45-k9zhc, webserver-789dfdff45-tlzhk, webserver-789dfdff45-bhx94
+old template:  Found 12 related pods for ReplicaSet deployment-9869/webserver-db49d755: webserver-db49d755-sgfj4 webserver-db49d755-7lbjx webserver-db49d755-qmztx webserver-db49d755-n8tkc webserver-db49d755-nj9xz webserver-db49d755-npnh6 webserver-db49d755-jp87r webserver-789dfdff45-t8t8v webserver-789dfdff45-k9zhc webserver-789dfdff45-cp5sq webserver-789dfdff45-tlzhk webserver-789dfdff45-bhx94
+new template:  Found 12 related pods for ReplicaSet <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> webserver-789dfdff45-tlzhk webserver-789dfdff45-bhx94 
+
+Processing line: 1800, rate 1870.1 lines/sec, 227 clusters so far.
+content:  Found 10 related pods for ReplicaSet deployment-9869/webserver-789dfdff45: webserver-789dfdff45-t8t8v, webserver-789dfdff45-k9zhc, webserver-789dfdff45-tlzhk, webserver-db49d755-nj9xz, webserver-db49d755-ttjls, webserver-db49d755-7lbjx, webserver-db49d755-qmztx, webserver-db49d755-n8tkc, webserver-db49d755-npnh6, webserver-db49d755-jp87r
+old template:  Found 10 related pods for ReplicaSet deployment-9869/webserver-789dfdff45: webserver-db49d755-nj9xz webserver-db49d755-7lbjx webserver-db49d755-qmztx webserver-db49d755-n8tkc webserver-db49d755-jp87r webserver-db49d755-npnh6 webserver-789dfdff45-k9zhc webserver-789dfdff45-t8t8v webserver-789dfdff45-tlzhk webserver-789dfdff45-bhx94
+new template:  Found 10 related pods for ReplicaSet deployment-9869/webserver-789dfdff45: <*> <*> <*> <*> <*> <*> <*> <*> <*> <*> 
+
+Processing line: 2000, rate 3383.0 lines/sec, 228 clusters so far.
+content:  "ReplicaSet deleted" replicaSet="deployment-9869/webserver-6584b976d5"
+old template:  ReplicaSet deleted replicaSet deployment-9869/webserver-847dcfb7fb
+new template:  ReplicaSet deleted replicaSet <*> 
+
+Processing line: 2200, rate 2453.5 lines/sec, 230 clusters so far.
+Processing line: 2400, rate 10680.4 lines/sec, 230 clusters so far.
+content:  object garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion:"v1", Kind:"Pod", Name:"simpletest-rc-to-be-deleted-lcwrp", UID:"<UID>", Controller:(*bool)(nil), BlockOwnerDeletion:(*bool)(nil)}, Namespace:"gc-6205"} has at least one existing owner: []v1.OwnerReference{v1.OwnerReference{APIVersion:"v1", Kind:"ReplicationController", Name:"simpletest-rc-to-stay", UID:"<UID>", Controller:(*bool)(nil), BlockOwnerDeletion:(*bool)(nil)}}, will not garbage collect
+old template:  object garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: v1 Kind: Pod Name: simpletest-rc-to-be-deleted-jfsgt UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: gc-6205 } has at least one existing owner: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: ReplicationController Name: simpletest-rc-to-stay UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)}} will not garbage collect
+new template:  object garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: v1 Kind: Pod Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: gc-6205 } has at least one existing owner: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: ReplicationController Name: simpletest-rc-to-stay UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)}} will not garbage collect 
+
+content:  remove dangling references []v1.OwnerReference(nil) and waiting references []v1.OwnerReference{v1.OwnerReference{APIVersion:"v1", Kind:"ReplicationController", Name:"simpletest-rc-to-be-deleted", UID:"<UID>", Controller:(*bool)(<HEX>), BlockOwnerDeletion:(*bool)(<HEX>)}} for object [v1/Pod, namespace: gc-6205, name: simpletest-rc-to-be-deleted-lcwrp, uid: <UID>]
+old template:  remove dangling references v1.OwnerReference(nil) and waiting references v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: ReplicationController Name: simpletest-rc-to-be-deleted UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}} for object v1/Pod namespace: gc-6205 name: simpletest-rc-to-be-deleted-jfsgt uid: <UID>
+new template:  remove dangling references v1.OwnerReference(nil) and waiting references v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: ReplicationController Name: simpletest-rc-to-be-deleted UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}} for object v1/Pod namespace: gc-6205 name: <*> uid: <UID> 
+
+Processing line: 200, rate 1860.9 lines/sec, 232 clusters so far.
+Processing line: 200, rate 15378.7 lines/sec, 232 clusters so far.
+Processing line: 200, rate 12948.2 lines/sec, 234 clusters so far.
+Processing line: 400, rate 15228.8 lines/sec, 234 clusters so far.
+Processing line: 600, rate 15628.8 lines/sec, 234 clusters so far.
+Processing line: 800, rate 14977.0 lines/sec, 234 clusters so far.
+Processing line: 1000, rate 15322.2 lines/sec, 234 clusters so far.
+Processing line: 1200, rate 15151.5 lines/sec, 234 clusters so far.
+Processing line: 1400, rate 15075.2 lines/sec, 234 clusters so far.
+Processing line: 1600, rate 14728.5 lines/sec, 234 clusters so far.
+content:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion:"discovery.k8s.io/v1", Kind:"EndpointSlice", Name:"latency-svc-9cr9q-b8k69", UID:"<UID>", Controller:(*bool)(nil), BlockOwnerDeletion:(*bool)(nil)}, Namespace:"svc-latency-3651"}, dependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:1, readerWait:0}, dependents:map[*garbagecollector.node]struct {}{}, deletingDependents:false, deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, beingDeleted:false, beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, virtual:false, virtualLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, owners:[]v1.OwnerReference{v1.OwnerReference{APIVersion:"v1", Kind:"Service", Name:"latency-svc-9cr9q", UID:"<UID>", Controller:(*bool)(<HEX>), BlockOwnerDeletion:(*bool)(<HEX>)}}}: endpointslices.discovery.k8s.io "latency-svc-9cr9q-b8k69" not found
+old template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: v1 Kind: PersistentVolumeClaim Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: <*> } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} beingDeleted:true beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: Pod Name: <*> UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: persistentvolumeclaims <*> not found
+new template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: <*> Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: <*> } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} <*> beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: <*> <*> not found 
+
+Processing line: 1800, rate 4489.2 lines/sec, 234 clusters so far.
+Processing line: 2000, rate 11764.7 lines/sec, 234 clusters so far.
+Processing line: 2200, rate 12925.8 lines/sec, 234 clusters so far.
+Processing line: 200, rate 13965.7 lines/sec, 234 clusters so far.
+Processing line: 200, rate 10648.5 lines/sec, 234 clusters so far.
+Processing line: 200, rate 16787.0 lines/sec, 234 clusters so far.
+Processing line: 400, rate 12002.6 lines/sec, 234 clusters so far.
+Processing line: 200, rate 11416.3 lines/sec, 234 clusters so far.
+Processing line: 200, rate 11108.7 lines/sec, 234 clusters so far.
+content:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion:"v1", Kind:"Pod", Name:"test-cleanup-controller-j9j8f", UID:"<UID>", Controller:(*bool)(nil), BlockOwnerDeletion:(*bool)(nil)}, Namespace:"deployment-4508"}, dependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:1, readerWait:0}, dependents:map[*garbagecollector.node]struct {}{}, deletingDependents:false, deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, beingDeleted:true, beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, virtual:false, virtualLock:sync.RWMutex{w:sync.Mutex{state:0, sema:<HEX>}, writerSem:<HEX>, readerSem:<HEX>, readerCount:0, readerWait:0}, owners:[]v1.OwnerReference{v1.OwnerReference{APIVersion:"apps/v1", Kind:"ReplicaSet", Name:"test-cleanup-controller", UID:"<UID>", Controller:(*bool)(<HEX>), BlockOwnerDeletion:(*bool)(<HEX>)}}}: pods "test-cleanup-controller-j9j8f" not found
+old template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: <*> Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: <*> } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} <*> beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: v1 Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: <*> <*> not found
+new template:  error syncing item &garbagecollector.node{identity:garbagecollector.objectReference{OwnerReference:v1.OwnerReference{APIVersion: <*> Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(nil) BlockOwnerDeletion:(*bool)(nil)} Namespace: <*> } dependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:1 readerWait:0} dependents:map *garbagecollector.node struct {}{} deletingDependents:false deletingDependentsLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} <*> beingDeletedLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} virtual:false virtualLock:sync.RWMutex{w:sync.Mutex{state:0 sema:<HEX>} writerSem:<HEX> readerSem:<HEX> readerCount:0 readerWait:0} owners: v1.OwnerReference{v1.OwnerReference{APIVersion: <*> Kind: <*> Name: <*> UID: <UID> Controller:(*bool)(<HEX>) BlockOwnerDeletion:(*bool)(<HEX>)}}}: <*> <*> not found 
+
+Processing line: 200, rate 11181.4 lines/sec, 234 clusters so far.
+content:  Controller still waiting on expectations &controller.ControlleeExpectations{add:1, del:-1, key:"job-3170/adopt-release", timestamp:time.Time{wall:<HEX>, ext:1093990505903, loc:(*time.Location)(<HEX>)}}
+old template:  Controller still waiting on expectations <*> del:0 key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}}
+new template:  Controller still waiting on expectations <*> <*> key: <*> timestamp:time.Time{wall:<HEX> <*> loc:(*time.Location)(<HEX>)}} 
+
+Processing line: 200, rate 15166.3 lines/sec, 234 clusters so far.
+Processing line: 400, rate 13602.9 lines/sec, 234 clusters so far.
+Processing line: 200, rate 15572.8 lines/sec, 237 clusters so far.
+Processing line: 400, rate 18572.0 lines/sec, 237 clusters so far.
+content:  namespace controller - deleteAllContent - namespace: ingress-9783, estimate: 0, errors: unable to retrieve the complete list of server APIs: crd-publish-openapi-test-foo.example.com/v1: the server could not find the requested resource
+old template:  namespace controller - deleteAllContent - namespace: gc-5952 estimate: 0 errors: unable to retrieve the complete list of server APIs: wardle.example.com/v1alpha1: the server could not find the requested resource
+new template:  namespace controller - deleteAllContent - namespace: <*> estimate: 0 errors: unable to retrieve the complete list of server APIs: <*> the server could not find the requested resource 
+
+content:  deletion of namespace ingress-9783 failed: unable to retrieve the complete list of server APIs: crd-publish-openapi-test-foo.example.com/v1: the server could not find the requested resource
+old template:  deletion of namespace gc-5952 failed: unable to retrieve the complete list of server APIs: wardle.example.com/v1alpha1: the server could not find the requested resource
+new template:  deletion of namespace <*> failed: unable to retrieve the complete list of server APIs: <*> the server could not find the requested resource 
+
+Processing line: 200, rate 13556.7 lines/sec, 237 clusters so far.
+Processing line: 200, rate 14766.3 lines/sec, 238 clusters so far.
+Processing line: 400, rate 12764.9 lines/sec, 238 clusters so far.
+Processing line: 200, rate 15550.9 lines/sec, 238 clusters so far.
+Processing line: 400, rate 13081.2 lines/sec, 238 clusters so far.
+Processing line: 600, rate 12382.3 lines/sec, 238 clusters so far.
+content:  "No unmet start times" cronjob="clientset-6287/cronjobc74a2b56-a00b-463f-8dac-4312d2e5a4c1"
+old template:  No unmet start times cronjob kubectl-2130/cronjob-test
+new template:  No unmet start times cronjob <*> 
+
+Processing line: 200, rate 14493.9 lines/sec, 240 clusters so far.
+Processing line: 200, rate 19583.1 lines/sec, 240 clusters so far.
+Processing line: 400, rate 14516.7 lines/sec, 240 clusters so far.
+Processing line: 200, rate 10005.5 lines/sec, 240 clusters so far.
+content:  Updating status "{\"status\":{\"volumesAttached\":[{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID>\"},{\"devicePath\":\"\",\"name\":\"kubernetes.io/csi/csi-hostpath-ephemeral-9835^<UID>\"}]}}" for node "kind-worker2" succeeded. VolumesAttached: [{kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4 } {kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 } {kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID> } {kubernetes.io/csi/csi-hostpath-ephemeral-9835^<UID> }]
+old template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-ephemeral-987^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID>\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4\ } {\ devicePath\ :\ \ \ name\ :\ kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID>\ } }} for node kind-worker2 succeeded. VolumesAttached: {kubernetes.io/csi/csi-hostpath-ephemeral-987^<UID> } {kubernetes.io/csi/csi-hostpath-volumemode-3601^<UID> } {kubernetes.io/csi/csi-mock-csi-mock-volumes-1027^4 } {kubernetes.io/csi/csi-mock-csi-mock-volumes-4458^4 } {kubernetes.io/csi/csi-hostpath-ephemeral-1712^<UID> }
+new template:  Updating status {\ status\ :{\ volumesAttached\ : {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } {\ devicePath\ :\ \ \ name\ :\ <*> } }} for node kind-worker2 succeeded. VolumesAttached: <*> } <*> } <*> } <*> } <*> } 
+
+Processing line: 400, rate 4706.9 lines/sec, 240 clusters so far.
+content:  at least one owner of object [v1/Pod, namespace: gc-1179, name: pod3, uid: <UID>] has FinalizerDeletingDependents, and the object itself has dependents, so it is going to be deleted in Foreground
+old template:  at least one owner of object v1/Pod namespace: gc-1179 name: pod2 uid: <UID> has FinalizerDeletingDependents and the object itself has dependents so it is going to be deleted in Foreground
+new template:  at least one owner of object v1/Pod namespace: gc-1179 name: <*> uid: <UID> has FinalizerDeletingDependents and the object itself has dependents so it is going to be deleted in Foreground 
+
+content:  couldn't find ipfamilies for headless service: services-5500/externalname-service likely because controller manager is likely connected to an old apiserver that does not support ip families yet. The service endpoint slice will use dual stack families until api-server default it correctly
+old template:  couldn't find ipfamilies for headless service: services-4586/externalname-service likely because controller manager is likely connected to an old apiserver that does not support ip families yet. The service endpoint slice will use dual stack families until api-server default it correctly
+new template:  couldn't find ipfamilies for headless service: <*> likely because controller manager is likely connected to an old apiserver that does not support ip families yet. The service endpoint slice will use dual stack families until api-server default it correctly 
+
+Processing line: 200, rate 12249.7 lines/sec, 242 clusters so far.
+content:  "Error removing protection finalizer from PVC" err="Operation cannot be fulfilled on persistentvolumeclaims \"pvc-rw6gk\": the object has been modified; please apply your changes to the latest version and try again" PVC="provisioning-4449/pvc-rw6gk"
+old template:  Error removing protection finalizer from PVC err Operation cannot be fulfilled on persistentvolumeclaims \ pvc-7f64c\ : the object has been modified; please apply your changes to the latest version and try again PVC provisioning-3234/pvc-7f64c
+new template:  Error removing protection finalizer from PVC err Operation cannot be fulfilled on persistentvolumeclaims \ <*> : the object has been modified; please apply your changes to the latest version and try again PVC <*> 
+
+content:  PVC provisioning-4449/pvc-rw6gk failed with : Operation cannot be fulfilled on persistentvolumeclaims "pvc-rw6gk": the object has been modified; please apply your changes to the latest version and try again
+old template:  PVC provisioning-3234/pvc-7f64c failed with : Operation cannot be fulfilled on persistentvolumeclaims pvc-7f64c : the object has been modified; please apply your changes to the latest version and try again
+new template:  PVC <*> failed with : Operation cannot be fulfilled on persistentvolumeclaims <*> : the object has been modified; please apply your changes to the latest version and try again 
+
+Processing line: 400, rate 3024.7 lines/sec, 242 clusters so far.
+Processing line: 200, rate 11652.3 lines/sec, 242 clusters so far.
+Processing line: 400, rate 11714.3 lines/sec, 242 clusters so far.
+Processing line: 200, rate 12418.6 lines/sec, 242 clusters so far.
+Processing line: 200, rate 12051.0 lines/sec, 242 clusters so far.
+Processing line: 400, rate 13233.7 lines/sec, 242 clusters so far.
+Processing line: 600, rate 13275.0 lines/sec, 242 clusters so far.
+Processing line: 200, rate 9646.4 lines/sec, 242 clusters so far.
+Processing line: 200, rate 12774.9 lines/sec, 242 clusters so far.
+Processing line: 200, rate 16183.6 lines/sec, 242 clusters so far.
+Processing line: 400, rate 13777.8 lines/sec, 242 clusters so far.
+content:  "Event occurred" object="job-5963/all-succeed" kind="Job" apiVersion="batch/v1" type="Normal" reason="Completed" message="Job completed"
+old template:  Event occurred object job-3685/fail-once-non-local kind Job apiVersion batch/v1 type Normal reason Completed message Job completed
+new template:  Event occurred object <*> kind Job apiVersion batch/v1 type Normal reason Completed message Job completed 
+
+content:  Found 0 related pods for ReplicationController kubectl-7268/update-demo-nautilus:
+old template:  Found 0 related pods for ReplicationController services-8113/slow-terminating-unready-pod:
+new template:  Found 0 related pods for ReplicationController <*> 
+
